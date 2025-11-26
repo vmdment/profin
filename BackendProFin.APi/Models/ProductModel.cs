@@ -1,0 +1,48 @@
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Collections.Generic;
+
+namespace BackendProFinAPi.Models
+{
+    public class ProductModel
+    {
+        [Key]
+        public int Id { get; set; }
+
+        [Required]
+        [MaxLength(255)]
+        public string Image { get; set; }
+
+        [Required]
+        [MaxLength(150)]
+        public string Slug { get; set; }
+
+        [Required]
+        [MaxLength(150)]
+        public string Name { get; set; }
+
+        public string? Description { get; set; }
+
+        [Column(TypeName = "decimal(18, 2)")]
+        public decimal Price { get; set; }
+
+        public int StockQuantity { get; set; }
+
+        public DateTime CreatedAt { get; set; }
+
+        // --- Clave Foránea y Propiedad de Navegación para el Creador (Mantenidas) ---
+        public int CreatedById { get; set; }
+        public UserModel Creator { get; set; } = null!;
+
+        // --- NUEVAS Clave Foránea y Propiedad de Navegación para el Tipo ---
+
+        // Clave Foránea: ID del tipo de producto al que pertenece
+        public int ProductTypeId { get; set; }
+
+        // Propiedad de Navegación: El objeto ProductType real (Relación N:1)
+        public ProductTypeModel ProductType { get; set; } = null!;
+
+        // --- Propiedad de Navegación para Ventas (Mantenida) ---
+        public ICollection<SaleDetailModel> SaleDetails { get; set; } = new List<SaleDetailModel>();
+    }
+}

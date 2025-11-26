@@ -1,0 +1,35 @@
+﻿<div class="card" style="width: 18rem;">
+    <img src="@Image" class="card-img-top" alt="@Slug">
+    <div class="card-body">
+        <h5 class="card-title">@Name</h5>
+        <h6 class="card-subtitle mb-2 text-success">
+            @Price
+        </h6>
+        <p class="card-text">
+            @Description
+        </p>
+
+        <a href="/products/@Slug" class="btn btn-primary">Ver detalles</a>
+    </div>
+</div>
+@code {
+
+    [Parameter]
+    public int Id { get; set; }
+
+    [Parameter]
+    public string Name { get; set; }
+    [Parameter]
+    public string Slug { get; set; }
+    [Parameter]
+    public string Image { get; set; }
+
+    [Parameter]
+    public string Description { get; set; }
+
+    [Parameter]
+    public decimal Price { get; set; }
+
+    
+
+}
