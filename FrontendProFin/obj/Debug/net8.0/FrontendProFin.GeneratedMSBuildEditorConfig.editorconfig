@@ -1,5 +1,7 @@
 is_global = true
 build_property.TargetFramework = net8.0
+build_property.TargetFrameworkIdentifier = .NETCoreApp
+build_property.TargetFrameworkVersion = v8.0
 build_property.TargetPlatformMinVersion = 
 build_property.UsingMicrosoftNETSdkWeb = true
 build_property.ProjectTypeGuids = 
@@ -9,61 +11,61 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = FrontendProFin
 build_property.RootNamespace = FrontendProFin
-build_property.ProjectDir = E:\ayuda elder\BackendProFin.APi\FrontendProFin\
+build_property.ProjectDir = /mnt/almacenamiento/darius1751/Escritorio/programacion/profin/FrontendProFin/
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = E:\ayuda elder\BackendProFin.APi\FrontendProFin
+build_property.MSBuildProjectDirectory = /mnt/almacenamiento/darius1751/Escritorio/programacion/profin/FrontendProFin
 build_property._RazorSourceGeneratorDebug = 
 build_property.EffectiveAnalysisLevelStyle = 8.0
 build_property.EnableCodeStyleSeverity = 
 
-[E:/ayuda elder/BackendProFin.APi/FrontendProFin/Components/App.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xBcHAucmF6b3I=
+[/mnt/almacenamiento/darius1751/Escritorio/programacion/profin/FrontendProFin/Components/App.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9BcHAucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/ayuda elder/BackendProFin.APi/FrontendProFin/Components/Pages/Cart.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xDYXJ0LnJhem9y
+[/mnt/almacenamiento/darius1751/Escritorio/programacion/profin/FrontendProFin/Components/Pages/Cart.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9DYXJ0LnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/ayuda elder/BackendProFin.APi/FrontendProFin/Components/Pages/Error.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xFcnJvci5yYXpvcg==
+[/mnt/almacenamiento/darius1751/Escritorio/programacion/profin/FrontendProFin/Components/Pages/Error.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9FcnJvci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/ayuda elder/BackendProFin.APi/FrontendProFin/Components/Pages/Home.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xIb21lLnJhem9y
+[/mnt/almacenamiento/darius1751/Escritorio/programacion/profin/FrontendProFin/Components/Pages/Home.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9Ib21lLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/ayuda elder/BackendProFin.APi/FrontendProFin/Components/Pages/Products.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xQcm9kdWN0cy5yYXpvcg==
+[/mnt/almacenamiento/darius1751/Escritorio/programacion/profin/FrontendProFin/Components/Pages/Products.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9Qcm9kdWN0cy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/ayuda elder/BackendProFin.APi/FrontendProFin/Components/Pages/Products\{slug\}.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xQcm9kdWN0c3tzbHVnfS5yYXpvcg==
+[/mnt/almacenamiento/darius1751/Escritorio/programacion/profin/FrontendProFin/Components/Pages/Weather.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9XZWF0aGVyLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/ayuda elder/BackendProFin.APi/FrontendProFin/Components/Pages/Weather.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xXZWF0aGVyLnJhem9y
+[/mnt/almacenamiento/darius1751/Escritorio/programacion/profin/FrontendProFin/Components/ProductCard.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9Qcm9kdWN0Q2FyZC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/ayuda elder/BackendProFin.APi/FrontendProFin/Components/ProductCard.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQcm9kdWN0Q2FyZC5yYXpvcg==
+[/mnt/almacenamiento/darius1751/Escritorio/programacion/profin/FrontendProFin/Components/Routes.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9Sb3V0ZXMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/ayuda elder/BackendProFin.APi/FrontendProFin/Components/Routes.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xSb3V0ZXMucmF6b3I=
+[/mnt/almacenamiento/darius1751/Escritorio/programacion/profin/FrontendProFin/Components/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9fSW1wb3J0cy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/ayuda elder/BackendProFin.APi/FrontendProFin/Components/_Imports.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xfSW1wb3J0cy5yYXpvcg==
-build_metadata.AdditionalFiles.CssScope = 
+[/mnt/almacenamiento/darius1751/Escritorio/programacion/profin/FrontendProFin/Components/Layout/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9MYXlvdXQvTWFpbkxheW91dC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-3syrj1gu3h
 
-[E:/ayuda elder/BackendProFin.APi/FrontendProFin/Components/Layout/MainLayout.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcTWFpbkxheW91dC5yYXpvcg==
-build_metadata.AdditionalFiles.CssScope = b-zeeidi9qrp
+[/mnt/almacenamiento/darius1751/Escritorio/programacion/profin/FrontendProFin/Components/Layout/NavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9MYXlvdXQvTmF2TWVudS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-tgq4ppjmx4
 
-[E:/ayuda elder/BackendProFin.APi/FrontendProFin/Components/Layout/NavMenu.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcTmF2TWVudS5yYXpvcg==
-build_metadata.AdditionalFiles.CssScope = b-h0e0mjd9wa
+[/mnt/almacenamiento/darius1751/Escritorio/programacion/profin/FrontendProFin/Components/Pages/Products\{slug\}.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9Qcm9kdWN0c3tzbHVnfS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-uivqszwxx8
