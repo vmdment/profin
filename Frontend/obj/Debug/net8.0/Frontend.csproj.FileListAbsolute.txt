@@ -37,3 +37,4 @@
 /mnt/almacenamiento/darius1751/Escritorio/programacion/profin/Frontend/obj/Debug/net8.0/scopedcss/Components/Pages/Products/{Slug}/Products{slug}.razor.rz.scp.css
 /mnt/almacenamiento/darius1751/Escritorio/programacion/profin/Frontend/obj/Debug/net8.0/scopedcss/Components/Pages/Register/Register.razor.rz.scp.css
 /mnt/almacenamiento/darius1751/Escritorio/programacion/profin/Frontend/obj/Debug/net8.0/scopedcss/Components/Pages/Products/Products.razor.rz.scp.css
+/mnt/almacenamiento/darius1751/Escritorio/programacion/profin/Frontend/obj/Debug/net8.0/scopedcss/Components/Pages/Dashboard/Dashboard.razor.rz.scp.css

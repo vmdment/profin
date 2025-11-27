@@ -1,6 +1,6 @@
 {
-  "SerializedFilePath": "/mnt/almacenamiento/darius1751/Escritorio/programacion/profin/BackendProFin.APi/obj/Debug/net8.0/project.razor.json",
-  "FilePath": "/mnt/almacenamiento/darius1751/Escritorio/programacion/profin/BackendProFin.APi/BackendProFinAPi.csproj",
+  "SerializedFilePath": "/mnt/almacenamiento/darius1751/Escritorio/programacion/profin/Frontend/obj/Debug/net8.0/project.razor.json",
+  "FilePath": "/mnt/almacenamiento/darius1751/Escritorio/programacion/profin/Frontend/Frontend.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-3.0",
     "LanguageVersion": "8.0",
@@ -12,6 +12,858 @@
   },
   "ProjectWorkspaceState": {
     "TagHelpers": [
+      {
+        "HashCode": 127440408,
+        "Kind": "Components.Component",
+        "Name": "Frontend.Components.App",
+        "AssemblyName": "Frontend",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "App"
+          }
+        ],
+        "Metadata": {
+          "Common.TypeName": "Frontend.Components.App",
+          "Common.TypeNameIdentifier": "App",
+          "Common.TypeNamespace": "Frontend.Components",
+          "Runtime.Name": "Components.IComponent"
+        }
+      },
+      {
+        "HashCode": -1639251765,
+        "Kind": "Components.Component",
+        "Name": "Frontend.Components.App",
+        "AssemblyName": "Frontend",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Frontend.Components.App"
+          }
+        ],
+        "Metadata": {
+          "Common.TypeName": "Frontend.Components.App",
+          "Common.TypeNameIdentifier": "App",
+          "Common.TypeNamespace": "Frontend.Components",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch",
+          "Runtime.Name": "Components.IComponent"
+        }
+      },
+      {
+        "HashCode": 1743589538,
+        "Kind": "Components.Component",
+        "Name": "Frontend.Components.Pages.Counter",
+        "AssemblyName": "Frontend",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Counter"
+          }
+        ],
+        "Metadata": {
+          "Common.TypeName": "Frontend.Components.Pages.Counter",
+          "Common.TypeNameIdentifier": "Counter",
+          "Common.TypeNamespace": "Frontend.Components.Pages",
+          "Runtime.Name": "Components.IComponent"
+        }
+      },
+      {
+        "HashCode": 395701342,
+        "Kind": "Components.Component",
+        "Name": "Frontend.Components.Pages.Counter",
+        "AssemblyName": "Frontend",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Frontend.Components.Pages.Counter"
+          }
+        ],
+        "Metadata": {
+          "Common.TypeName": "Frontend.Components.Pages.Counter",
+          "Common.TypeNameIdentifier": "Counter",
+          "Common.TypeNamespace": "Frontend.Components.Pages",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch",
+          "Runtime.Name": "Components.IComponent"
+        }
+      },
+      {
+        "HashCode": -1062908997,
+        "Kind": "Components.Component",
+        "Name": "Frontend.Components.Pages.Error",
+        "AssemblyName": "Frontend",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Error"
+          }
+        ],
+        "Metadata": {
+          "Common.TypeName": "Frontend.Components.Pages.Error",
+          "Common.TypeNameIdentifier": "Error",
+          "Common.TypeNamespace": "Frontend.Components.Pages",
+          "Runtime.Name": "Components.IComponent"
+        }
+      },
+      {
+        "HashCode": 960115355,
+        "Kind": "Components.Component",
+        "Name": "Frontend.Components.Pages.Error",
+        "AssemblyName": "Frontend",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Frontend.Components.Pages.Error"
+          }
+        ],
+        "Metadata": {
+          "Common.TypeName": "Frontend.Components.Pages.Error",
+          "Common.TypeNameIdentifier": "Error",
+          "Common.TypeNamespace": "Frontend.Components.Pages",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch",
+          "Runtime.Name": "Components.IComponent"
+        }
+      },
+      {
+        "HashCode": -1580326258,
+        "Kind": "Components.Component",
+        "Name": "Frontend.Components.Pages.Weather",
+        "AssemblyName": "Frontend",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Weather"
+          }
+        ],
+        "Metadata": {
+          "Common.TypeName": "Frontend.Components.Pages.Weather",
+          "Common.TypeNameIdentifier": "Weather",
+          "Common.TypeNamespace": "Frontend.Components.Pages",
+          "Runtime.Name": "Components.IComponent"
+        }
+      },
+      {
+        "HashCode": -916383494,
+        "Kind": "Components.Component",
+        "Name": "Frontend.Components.Pages.Weather",
+        "AssemblyName": "Frontend",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Frontend.Components.Pages.Weather"
+          }
+        ],
+        "Metadata": {
+          "Common.TypeName": "Frontend.Components.Pages.Weather",
+          "Common.TypeNameIdentifier": "Weather",
+          "Common.TypeNamespace": "Frontend.Components.Pages",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch",
+          "Runtime.Name": "Components.IComponent"
+        }
+      },
+      {
+        "HashCode": -1237938839,
+        "Kind": "Components.Component",
+        "Name": "Frontend.Components.Pages.Cart.CartItem.CartItem",
+        "AssemblyName": "Frontend",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "CartItem"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "Id",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "Id",
+              "Common.GloballyQualifiedTypeName": "global::System.String"
+            }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "Image",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "Image",
+              "Common.GloballyQualifiedTypeName": "global::System.String"
+            }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "Name",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "Name",
+              "Common.GloballyQualifiedTypeName": "global::System.String"
+            }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "Price",
+            "TypeName": "System.Decimal",
+            "Metadata": {
+              "Common.PropertyName": "Price",
+              "Common.GloballyQualifiedTypeName": "global::System.Decimal"
+            }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "Cant",
+            "TypeName": "System.Int32",
+            "Metadata": {
+              "Common.PropertyName": "Cant",
+              "Common.GloballyQualifiedTypeName": "global::System.Int32"
+            }
+          }
+        ],
+        "Metadata": {
+          "Common.TypeName": "Frontend.Components.Pages.Cart.CartItem.CartItem",
+          "Common.TypeNameIdentifier": "CartItem",
+          "Common.TypeNamespace": "Frontend.Components.Pages.Cart.CartItem",
+          "Runtime.Name": "Components.IComponent"
+        }
+      },
+      {
+        "HashCode": -266681536,
+        "Kind": "Components.Component",
+        "Name": "Frontend.Components.Pages.Cart.CartItem.CartItem",
+        "AssemblyName": "Frontend",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Frontend.Components.Pages.Cart.CartItem.CartItem"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "Id",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "Id",
+              "Common.GloballyQualifiedTypeName": "global::System.String"
+            }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "Image",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "Image",
+              "Common.GloballyQualifiedTypeName": "global::System.String"
+            }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "Name",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "Name",
+              "Common.GloballyQualifiedTypeName": "global::System.String"
+            }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "Price",
+            "TypeName": "System.Decimal",
+            "Metadata": {
+              "Common.PropertyName": "Price",
+              "Common.GloballyQualifiedTypeName": "global::System.Decimal"
+            }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "Cant",
+            "TypeName": "System.Int32",
+            "Metadata": {
+              "Common.PropertyName": "Cant",
+              "Common.GloballyQualifiedTypeName": "global::System.Int32"
+            }
+          }
+        ],
+        "Metadata": {
+          "Common.TypeName": "Frontend.Components.Pages.Cart.CartItem.CartItem",
+          "Common.TypeNameIdentifier": "CartItem",
+          "Common.TypeNamespace": "Frontend.Components.Pages.Cart.CartItem",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch",
+          "Runtime.Name": "Components.IComponent"
+        }
+      },
+      {
+        "HashCode": -761193846,
+        "Kind": "Components.Component",
+        "Name": "Frontend.Components.Pages.Cart.Cart",
+        "AssemblyName": "Frontend",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Cart"
+          }
+        ],
+        "Metadata": {
+          "Common.TypeName": "Frontend.Components.Pages.Cart.Cart",
+          "Common.TypeNameIdentifier": "Cart",
+          "Common.TypeNamespace": "Frontend.Components.Pages.Cart",
+          "Runtime.Name": "Components.IComponent"
+        }
+      },
+      {
+        "HashCode": 2006807351,
+        "Kind": "Components.Component",
+        "Name": "Frontend.Components.Pages.Cart.Cart",
+        "AssemblyName": "Frontend",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Frontend.Components.Pages.Cart.Cart"
+          }
+        ],
+        "Metadata": {
+          "Common.TypeName": "Frontend.Components.Pages.Cart.Cart",
+          "Common.TypeNameIdentifier": "Cart",
+          "Common.TypeNamespace": "Frontend.Components.Pages.Cart",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch",
+          "Runtime.Name": "Components.IComponent"
+        }
+      },
+      {
+        "HashCode": -1065778645,
+        "Kind": "Components.Component",
+        "Name": "Frontend.Components.Pages.Home.Home",
+        "AssemblyName": "Frontend",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Home"
+          }
+        ],
+        "Metadata": {
+          "Common.TypeName": "Frontend.Components.Pages.Home.Home",
+          "Common.TypeNameIdentifier": "Home",
+          "Common.TypeNamespace": "Frontend.Components.Pages.Home",
+          "Runtime.Name": "Components.IComponent"
+        }
+      },
+      {
+        "HashCode": -450189257,
+        "Kind": "Components.Component",
+        "Name": "Frontend.Components.Pages.Home.Home",
+        "AssemblyName": "Frontend",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Frontend.Components.Pages.Home.Home"
+          }
+        ],
+        "Metadata": {
+          "Common.TypeName": "Frontend.Components.Pages.Home.Home",
+          "Common.TypeNameIdentifier": "Home",
+          "Common.TypeNamespace": "Frontend.Components.Pages.Home",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch",
+          "Runtime.Name": "Components.IComponent"
+        }
+      },
+      {
+        "HashCode": -1838399073,
+        "Kind": "Components.Component",
+        "Name": "Frontend.Components.Pages.Products.card.ProductCard",
+        "AssemblyName": "Frontend",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "ProductCard"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "Id",
+            "TypeName": "System.Int32",
+            "Metadata": {
+              "Common.PropertyName": "Id",
+              "Common.GloballyQualifiedTypeName": "global::System.Int32"
+            }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "Name",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "Name",
+              "Common.GloballyQualifiedTypeName": "global::System.String"
+            }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "Slug",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "Slug",
+              "Common.GloballyQualifiedTypeName": "global::System.String"
+            }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "Image",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "Image",
+              "Common.GloballyQualifiedTypeName": "global::System.String"
+            }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "Description",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "Description",
+              "Common.GloballyQualifiedTypeName": "global::System.String"
+            }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "Price",
+            "TypeName": "System.Decimal",
+            "Metadata": {
+              "Common.PropertyName": "Price",
+              "Common.GloballyQualifiedTypeName": "global::System.Decimal"
+            }
+          }
+        ],
+        "Metadata": {
+          "Common.TypeName": "Frontend.Components.Pages.Products.card.ProductCard",
+          "Common.TypeNameIdentifier": "ProductCard",
+          "Common.TypeNamespace": "Frontend.Components.Pages.Products.card",
+          "Runtime.Name": "Components.IComponent"
+        }
+      },
+      {
+        "HashCode": 325600254,
+        "Kind": "Components.Component",
+        "Name": "Frontend.Components.Pages.Products.card.ProductCard",
+        "AssemblyName": "Frontend",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Frontend.Components.Pages.Products.card.ProductCard"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "Id",
+            "TypeName": "System.Int32",
+            "Metadata": {
+              "Common.PropertyName": "Id",
+              "Common.GloballyQualifiedTypeName": "global::System.Int32"
+            }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "Name",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "Name",
+              "Common.GloballyQualifiedTypeName": "global::System.String"
+            }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "Slug",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "Slug",
+              "Common.GloballyQualifiedTypeName": "global::System.String"
+            }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "Image",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "Image",
+              "Common.GloballyQualifiedTypeName": "global::System.String"
+            }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "Description",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "Description",
+              "Common.GloballyQualifiedTypeName": "global::System.String"
+            }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "Price",
+            "TypeName": "System.Decimal",
+            "Metadata": {
+              "Common.PropertyName": "Price",
+              "Common.GloballyQualifiedTypeName": "global::System.Decimal"
+            }
+          }
+        ],
+        "Metadata": {
+          "Common.TypeName": "Frontend.Components.Pages.Products.card.ProductCard",
+          "Common.TypeNameIdentifier": "ProductCard",
+          "Common.TypeNamespace": "Frontend.Components.Pages.Products.card",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch",
+          "Runtime.Name": "Components.IComponent"
+        }
+      },
+      {
+        "HashCode": 643621713,
+        "Kind": "Components.Component",
+        "Name": "Frontend.Components.Pages.Products.Products",
+        "AssemblyName": "Frontend",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Products"
+          }
+        ],
+        "Metadata": {
+          "Common.TypeName": "Frontend.Components.Pages.Products.Products",
+          "Common.TypeNameIdentifier": "Products",
+          "Common.TypeNamespace": "Frontend.Components.Pages.Products",
+          "Runtime.Name": "Components.IComponent"
+        }
+      },
+      {
+        "HashCode": 521803275,
+        "Kind": "Components.Component",
+        "Name": "Frontend.Components.Pages.Products.Products",
+        "AssemblyName": "Frontend",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Frontend.Components.Pages.Products.Products"
+          }
+        ],
+        "Metadata": {
+          "Common.TypeName": "Frontend.Components.Pages.Products.Products",
+          "Common.TypeNameIdentifier": "Products",
+          "Common.TypeNamespace": "Frontend.Components.Pages.Products",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch",
+          "Runtime.Name": "Components.IComponent"
+        }
+      },
+      {
+        "HashCode": -1013852572,
+        "Kind": "Components.Component",
+        "Name": "Frontend.Components.Pages.Products._Slug_.Products_slug_",
+        "AssemblyName": "Frontend",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Products_slug_"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "Slug",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "Slug",
+              "Common.GloballyQualifiedTypeName": "global::System.String"
+            }
+          }
+        ],
+        "Metadata": {
+          "Common.TypeName": "Frontend.Components.Pages.Products._Slug_.Products_slug_",
+          "Common.TypeNameIdentifier": "Products_slug_",
+          "Common.TypeNamespace": "Frontend.Components.Pages.Products._Slug_",
+          "Runtime.Name": "Components.IComponent"
+        }
+      },
+      {
+        "HashCode": -1964686330,
+        "Kind": "Components.Component",
+        "Name": "Frontend.Components.Pages.Products._Slug_.Products_slug_",
+        "AssemblyName": "Frontend",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Frontend.Components.Pages.Products._Slug_.Products_slug_"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "Slug",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "Slug",
+              "Common.GloballyQualifiedTypeName": "global::System.String"
+            }
+          }
+        ],
+        "Metadata": {
+          "Common.TypeName": "Frontend.Components.Pages.Products._Slug_.Products_slug_",
+          "Common.TypeNameIdentifier": "Products_slug_",
+          "Common.TypeNamespace": "Frontend.Components.Pages.Products._Slug_",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch",
+          "Runtime.Name": "Components.IComponent"
+        }
+      },
+      {
+        "HashCode": 1061579807,
+        "Kind": "Components.Component",
+        "Name": "Frontend.Components.Pages.Register.Register",
+        "AssemblyName": "Frontend",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Register"
+          }
+        ],
+        "Metadata": {
+          "Common.TypeName": "Frontend.Components.Pages.Register.Register",
+          "Common.TypeNameIdentifier": "Register",
+          "Common.TypeNamespace": "Frontend.Components.Pages.Register",
+          "Runtime.Name": "Components.IComponent"
+        }
+      },
+      {
+        "HashCode": 1503597516,
+        "Kind": "Components.Component",
+        "Name": "Frontend.Components.Pages.Register.Register",
+        "AssemblyName": "Frontend",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Frontend.Components.Pages.Register.Register"
+          }
+        ],
+        "Metadata": {
+          "Common.TypeName": "Frontend.Components.Pages.Register.Register",
+          "Common.TypeNameIdentifier": "Register",
+          "Common.TypeNamespace": "Frontend.Components.Pages.Register",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch",
+          "Runtime.Name": "Components.IComponent"
+        }
+      },
+      {
+        "HashCode": -1973072786,
+        "Kind": "Components.Component",
+        "Name": "Frontend.Components.Pages.Dashboard.Dashboard",
+        "AssemblyName": "Frontend",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Dashboard"
+          }
+        ],
+        "Metadata": {
+          "Common.TypeName": "Frontend.Components.Pages.Dashboard.Dashboard",
+          "Common.TypeNameIdentifier": "Dashboard",
+          "Common.TypeNamespace": "Frontend.Components.Pages.Dashboard",
+          "Runtime.Name": "Components.IComponent"
+        }
+      },
+      {
+        "HashCode": -446297132,
+        "Kind": "Components.Component",
+        "Name": "Frontend.Components.Pages.Dashboard.Dashboard",
+        "AssemblyName": "Frontend",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Frontend.Components.Pages.Dashboard.Dashboard"
+          }
+        ],
+        "Metadata": {
+          "Common.TypeName": "Frontend.Components.Pages.Dashboard.Dashboard",
+          "Common.TypeNameIdentifier": "Dashboard",
+          "Common.TypeNamespace": "Frontend.Components.Pages.Dashboard",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch",
+          "Runtime.Name": "Components.IComponent"
+        }
+      },
+      {
+        "HashCode": -1228566442,
+        "Kind": "Components.Component",
+        "Name": "Frontend.Components.Routes",
+        "AssemblyName": "Frontend",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Routes"
+          }
+        ],
+        "Metadata": {
+          "Common.TypeName": "Frontend.Components.Routes",
+          "Common.TypeNameIdentifier": "Routes",
+          "Common.TypeNamespace": "Frontend.Components",
+          "Runtime.Name": "Components.IComponent"
+        }
+      },
+      {
+        "HashCode": -2116884111,
+        "Kind": "Components.Component",
+        "Name": "Frontend.Components.Routes",
+        "AssemblyName": "Frontend",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Frontend.Components.Routes"
+          }
+        ],
+        "Metadata": {
+          "Common.TypeName": "Frontend.Components.Routes",
+          "Common.TypeNameIdentifier": "Routes",
+          "Common.TypeNamespace": "Frontend.Components",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch",
+          "Runtime.Name": "Components.IComponent"
+        }
+      },
+      {
+        "HashCode": -1711977106,
+        "Kind": "Components.Component",
+        "Name": "Frontend.Components.Layout.MainLayout",
+        "AssemblyName": "Frontend",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "MainLayout"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "Body",
+            "TypeName": "Microsoft.AspNetCore.Components.RenderFragment",
+            "Documentation": "<member name=\"P:Microsoft.AspNetCore.Components.LayoutComponentBase.Body\">\n            <summary>\n            Gets the content to be rendered inside the layout.\n            </summary>\n        </member>",
+            "Metadata": {
+              "Common.PropertyName": "Body",
+              "Common.GloballyQualifiedTypeName": "global::Microsoft.AspNetCore.Components.RenderFragment",
+              "Components.ChildContent": "True"
+            }
+          }
+        ],
+        "Metadata": {
+          "Common.TypeName": "Frontend.Components.Layout.MainLayout",
+          "Common.TypeNameIdentifier": "MainLayout",
+          "Common.TypeNamespace": "Frontend.Components.Layout",
+          "Runtime.Name": "Components.IComponent"
+        }
+      },
+      {
+        "HashCode": -358028554,
+        "Kind": "Components.Component",
+        "Name": "Frontend.Components.Layout.MainLayout",
+        "AssemblyName": "Frontend",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Frontend.Components.Layout.MainLayout"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "Body",
+            "TypeName": "Microsoft.AspNetCore.Components.RenderFragment",
+            "Documentation": "<member name=\"P:Microsoft.AspNetCore.Components.LayoutComponentBase.Body\">\n            <summary>\n            Gets the content to be rendered inside the layout.\n            </summary>\n        </member>",
+            "Metadata": {
+              "Common.PropertyName": "Body",
+              "Common.GloballyQualifiedTypeName": "global::Microsoft.AspNetCore.Components.RenderFragment",
+              "Components.ChildContent": "True"
+            }
+          }
+        ],
+        "Metadata": {
+          "Common.TypeName": "Frontend.Components.Layout.MainLayout",
+          "Common.TypeNameIdentifier": "MainLayout",
+          "Common.TypeNamespace": "Frontend.Components.Layout",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch",
+          "Runtime.Name": "Components.IComponent"
+        }
+      },
+      {
+        "HashCode": -583589591,
+        "Kind": "Components.ChildContent",
+        "Name": "Frontend.Components.Layout.MainLayout.Body",
+        "AssemblyName": "Frontend",
+        "Documentation": "<member name=\"P:Microsoft.AspNetCore.Components.LayoutComponentBase.Body\">\n            <summary>\n            Gets the content to be rendered inside the layout.\n            </summary>\n        </member>",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Body",
+            "ParentTag": "MainLayout"
+          }
+        ],
+        "Metadata": {
+          "Common.TypeName": "Frontend.Components.Layout.MainLayout.Body",
+          "Common.TypeNameIdentifier": "MainLayout",
+          "Common.TypeNamespace": "Frontend.Components.Layout",
+          "Components.IsSpecialKind": "Components.ChildContent",
+          "Runtime.Name": "Components.None"
+        }
+      },
+      {
+        "HashCode": 1875359418,
+        "Kind": "Components.ChildContent",
+        "Name": "Frontend.Components.Layout.MainLayout.Body",
+        "AssemblyName": "Frontend",
+        "Documentation": "<member name=\"P:Microsoft.AspNetCore.Components.LayoutComponentBase.Body\">\n            <summary>\n            Gets the content to be rendered inside the layout.\n            </summary>\n        </member>",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Body",
+            "ParentTag": "Frontend.Components.Layout.MainLayout"
+          }
+        ],
+        "Metadata": {
+          "Common.TypeName": "Frontend.Components.Layout.MainLayout.Body",
+          "Common.TypeNameIdentifier": "MainLayout",
+          "Common.TypeNamespace": "Frontend.Components.Layout",
+          "Components.IsSpecialKind": "Components.ChildContent",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch",
+          "Runtime.Name": "Components.None"
+        }
+      },
+      {
+        "HashCode": 81634283,
+        "Kind": "Components.Component",
+        "Name": "Frontend.Components.Layout.NavMenu",
+        "AssemblyName": "Frontend",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "NavMenu"
+          }
+        ],
+        "Metadata": {
+          "Common.TypeName": "Frontend.Components.Layout.NavMenu",
+          "Common.TypeNameIdentifier": "NavMenu",
+          "Common.TypeNamespace": "Frontend.Components.Layout",
+          "Runtime.Name": "Components.IComponent"
+        }
+      },
+      {
+        "HashCode": 589486012,
+        "Kind": "Components.Component",
+        "Name": "Frontend.Components.Layout.NavMenu",
+        "AssemblyName": "Frontend",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Frontend.Components.Layout.NavMenu"
+          }
+        ],
+        "Metadata": {
+          "Common.TypeName": "Frontend.Components.Layout.NavMenu",
+          "Common.TypeNameIdentifier": "NavMenu",
+          "Common.TypeNamespace": "Frontend.Components.Layout",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch",
+          "Runtime.Name": "Components.IComponent"
+        }
+      },
       {
         "HashCode": 185908727,
         "Kind": "Components.Component",
@@ -19326,7 +20178,88 @@
     ],
     "CSharpLanguageVersion": 1200
   },
-  "RootNamespace": "BackendProFinAPi",
-  "Documents": [],
+  "RootNamespace": "Frontend",
+  "Documents": [
+    {
+      "FilePath": "/mnt/almacenamiento/darius1751/Escritorio/programacion/profin/Frontend/Components/Pages/Cart/Cart.razor",
+      "TargetPath": "Components\\Pages\\Cart\\Cart.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "/mnt/almacenamiento/darius1751/Escritorio/programacion/profin/Frontend/Components/Layout/MainLayout.razor",
+      "TargetPath": "Components\\Layout\\MainLayout.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "/mnt/almacenamiento/darius1751/Escritorio/programacion/profin/Frontend/Components/Pages/Products/card/ProductCard.razor",
+      "TargetPath": "Components\\Pages\\Products\\card\\ProductCard.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "/mnt/almacenamiento/darius1751/Escritorio/programacion/profin/Frontend/Components/App.razor",
+      "TargetPath": "Components\\App.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "/mnt/almacenamiento/darius1751/Escritorio/programacion/profin/Frontend/Components/Pages/Counter.razor",
+      "TargetPath": "Components\\Pages\\Counter.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "/mnt/almacenamiento/darius1751/Escritorio/programacion/profin/Frontend/Components/Pages/Products/Products.razor",
+      "TargetPath": "Components\\Pages\\Products\\Products.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "/mnt/almacenamiento/darius1751/Escritorio/programacion/profin/Frontend/Components/Pages/Products/{Slug}/Products{slug}.razor",
+      "TargetPath": "Components\\Pages\\Products\\{Slug}\\Products{slug}.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "/mnt/almacenamiento/darius1751/Escritorio/programacion/profin/Frontend/Components/Routes.razor",
+      "TargetPath": "Components\\Routes.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "/mnt/almacenamiento/darius1751/Escritorio/programacion/profin/Frontend/Components/Layout/NavMenu.razor",
+      "TargetPath": "Components\\Layout\\NavMenu.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "/mnt/almacenamiento/darius1751/Escritorio/programacion/profin/Frontend/Components/Pages/Cart/CartItem/CartItem.razor",
+      "TargetPath": "Components\\Pages\\Cart\\CartItem\\CartItem.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "/mnt/almacenamiento/darius1751/Escritorio/programacion/profin/Frontend/Components/Pages/Dashboard/Dashboard.razor",
+      "TargetPath": "Components\\Pages\\Dashboard\\Dashboard.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "/mnt/almacenamiento/darius1751/Escritorio/programacion/profin/Frontend/Components/Pages/Error.razor",
+      "TargetPath": "Components\\Pages\\Error.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "/mnt/almacenamiento/darius1751/Escritorio/programacion/profin/Frontend/Components/Pages/Home/Home.razor",
+      "TargetPath": "Components\\Pages\\Home\\Home.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "/mnt/almacenamiento/darius1751/Escritorio/programacion/profin/Frontend/Components/Pages/Weather.razor",
+      "TargetPath": "Components\\Pages\\Weather.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "/mnt/almacenamiento/darius1751/Escritorio/programacion/profin/Frontend/Components/Pages/Register/Register.razor",
+      "TargetPath": "Components\\Pages\\Register\\Register.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "/mnt/almacenamiento/darius1751/Escritorio/programacion/profin/Frontend/Components/_Imports.razor",
+      "TargetPath": "Components\\_Imports.razor",
+      "FileKind": "componentImport"
+    }
+  ],
   "SerializationFormat": "0.3"
 }

@@ -1,6 +1,7 @@
 ﻿@page "/cart"
 @using Frontend.Components.Pages.Cart.CartItem
 @using Frontend.Models
+@inject IHttpClientFactory ClientFactory
 <PageTitle>Profin - Cart</PageTitle>
 <div class="d-flex flex-column gap-5">
     <h1 class="w-100 text-center fw-bold">
@@ -42,7 +43,7 @@
                         @(ProductsInCart.Sum((product) => product.Price * product.Cant))
                     </span>
                 </div>
-                <button class="btn btn-primary fw-bold">Realizar compra</button>
+                <button class="btn btn-primary fw-bold" @onclick="HandlePayment">Realizar compra</button>
             </div>
         </div>
     </div>
@@ -67,6 +68,13 @@
                 Price = 2500
             }
         ]);
+
+        public async Task HandlePayment()
+        {
+            @* var client = ClientFactory.CreateClient("api");
+            var data = await client.PostAsJsonAsync("sales", new {});
+            await data.Content.ReadFromJsonAsync<Payment>(); *@
+        }
 
     }
 
