@@ -1,6 +1,6 @@
 @page "/register"
 @using System.Text.Json
-@using FrontendProFin.Models
+@using Frontend.Models
 @inject IHttpClientFactory ClientFactory
 <PageTitle>profin - register</PageTitle>
 <div>
@@ -49,7 +49,7 @@
         @* if (Password == ConfirmPassword)
         {
             var client = ClientFactory.CreateClient("api");
-            var data = await client.PostAsJsonAsync("", JsonSerializer.Serialize(new
+            var data = await client.PostAsJsonAsync("customer", JsonSerializer.Serialize(new
             {
                 Name,
                 Phone,

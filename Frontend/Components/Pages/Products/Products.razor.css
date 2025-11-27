@@ -1,0 +1,9 @@
+.products-filters {
+    max-width: 100%;
+    width: 60rem;
+    margin: 0 auto;
+}
+
+.products-form-select {
+    width: fit-content;
+}

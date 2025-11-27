@@ -1,0 +1,23 @@
+.cart-list {
+    width: 100%;
+    max-width: 40rem;
+}
+
+.cart-prebilling {
+    border-radius: 1.5rem;
+    border: 1px solid #38383d8c;
+    width: 100%;
+    max-width: 50rem;
+}
+
+.price::before {
+    content: "$ ";
+}
+
+.product-billing {
+    font-size: 1.2rem;
+}
+
+.total-payment {
+    font-size: 2rem;
+}

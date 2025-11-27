@@ -30,16 +30,8 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9Db3VudGVyLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/almacenamiento/darius1751/Escritorio/programacion/profin/Frontend/Components/Pages/Error copy.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9FcnJvciBjb3B5LnJhem9y
-build_metadata.AdditionalFiles.CssScope = 
-
 [/mnt/almacenamiento/darius1751/Escritorio/programacion/profin/Frontend/Components/Pages/Error.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9FcnJvci5yYXpvcg==
-build_metadata.AdditionalFiles.CssScope = 
-
-[/mnt/almacenamiento/darius1751/Escritorio/programacion/profin/Frontend/Components/Pages/Products.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9Qcm9kdWN0cy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
 [/mnt/almacenamiento/darius1751/Escritorio/programacion/profin/Frontend/Components/Pages/Weather.razor]
@@ -62,26 +54,30 @@ build_metadata.AdditionalFiles.CssScope = b-46ojlnh66e
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9MYXlvdXQvTmF2TWVudS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = b-w6v3fayc1j
 
-[/mnt/almacenamiento/darius1751/Escritorio/programacion/profin/Frontend/Components/Pages/Cart.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9DYXJ0LnJhem9y
-build_metadata.AdditionalFiles.CssScope = b-sverlnysv2
+[/mnt/almacenamiento/darius1751/Escritorio/programacion/profin/Frontend/Components/Pages/Cart/Cart.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9DYXJ0L0NhcnQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-blh02gifkn
 
-[/mnt/almacenamiento/darius1751/Escritorio/programacion/profin/Frontend/Components/Pages/CartItem.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9DYXJ0SXRlbS5yYXpvcg==
-build_metadata.AdditionalFiles.CssScope = b-6nl3l8wpr2
+[/mnt/almacenamiento/darius1751/Escritorio/programacion/profin/Frontend/Components/Pages/Cart/CartItem/CartItem.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9DYXJ0L0NhcnRJdGVtL0NhcnRJdGVtLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-qm8dybfsdv
 
-[/mnt/almacenamiento/darius1751/Escritorio/programacion/profin/Frontend/Components/Pages/Home.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9Ib21lLnJhem9y
-build_metadata.AdditionalFiles.CssScope = b-cexk2q2fbd
+[/mnt/almacenamiento/darius1751/Escritorio/programacion/profin/Frontend/Components/Pages/Home/Home.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9Ib21lL0hvbWUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-9qduhigynm
 
-[/mnt/almacenamiento/darius1751/Escritorio/programacion/profin/Frontend/Components/Pages/Products\{slug\}.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9Qcm9kdWN0c3tzbHVnfS5yYXpvcg==
-build_metadata.AdditionalFiles.CssScope = b-lmtnd89g9b
+[/mnt/almacenamiento/darius1751/Escritorio/programacion/profin/Frontend/Components/Pages/Products/card/ProductCard.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9Qcm9kdWN0cy9jYXJkL1Byb2R1Y3RDYXJkLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-slwztqr207
 
-[/mnt/almacenamiento/darius1751/Escritorio/programacion/profin/Frontend/Components/Pages/Register.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9SZWdpc3Rlci5yYXpvcg==
-build_metadata.AdditionalFiles.CssScope = b-y94k47j5ld
+[/mnt/almacenamiento/darius1751/Escritorio/programacion/profin/Frontend/Components/Pages/Products/Products.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9Qcm9kdWN0cy9Qcm9kdWN0cy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-w51kuonhor
 
-[/mnt/almacenamiento/darius1751/Escritorio/programacion/profin/Frontend/Components/ProductCard.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9Qcm9kdWN0Q2FyZC5yYXpvcg==
-build_metadata.AdditionalFiles.CssScope = b-omkzpbzivh
+[/mnt/almacenamiento/darius1751/Escritorio/programacion/profin/Frontend/Components/Pages/Products/\{Slug\}/Products\{slug\}.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9Qcm9kdWN0cy97U2x1Z30vUHJvZHVjdHN7c2x1Z30ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-79tm95qiqn
+
+[/mnt/almacenamiento/darius1751/Escritorio/programacion/profin/Frontend/Components/Pages/Register/Register.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9SZWdpc3Rlci9SZWdpc3Rlci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-k0h44288pc

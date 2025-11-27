@@ -1,18 +1,19 @@
-.cart-product-image[b-6nl3l8wpr2] {
+.cart-product-image[b-qm8dybfsdv] {
     width: 4rem;
 }
-.cart-product[b-6nl3l8wpr2] {
+
+.cart-product[b-qm8dybfsdv] {
     width: 100%;
     padding: 1.2rem;
     border: 1px solid #38383d8c;
     border-radius: 1.5rem;
 }
 
-.cart-product-price[b-6nl3l8wpr2]::before {
+.cart-product-price[b-qm8dybfsdv]::before {
     content: "$ ";
 }
 
-.btn-cart[b-6nl3l8wpr2] {
+.btn-cart[b-qm8dybfsdv] {
     width: 1.5rem !important;
     height: 1.5rem !important;
     display: flex;

@@ -1,0 +1,23 @@
+.cart-list[b-blh02gifkn] {
+    width: 100%;
+    max-width: 40rem;
+}
+
+.cart-prebilling[b-blh02gifkn] {
+    border-radius: 1.5rem;
+    border: 1px solid #38383d8c;
+    width: 100%;
+    max-width: 50rem;
+}
+
+.price[b-blh02gifkn]::before {
+    content: "$ ";
+}
+
+.product-billing[b-blh02gifkn] {
+    font-size: 1.2rem;
+}
+
+.total-payment[b-blh02gifkn] {
+    font-size: 2rem;
+}

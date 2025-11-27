@@ -1,5 +1,5 @@
 
-namespace FrontendProFin.Models
+namespace Frontend.Models
 {
     public class Product
     {

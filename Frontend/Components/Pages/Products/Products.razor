@@ -1,0 +1,68 @@
+﻿@page "/products"
+@using Frontend.Components.Pages.Products.card
+@using Frontend.Models
+@inject IHttpClientFactory ClientFactory
+<PageTitle>Productos</PageTitle>
+<div class="d-flex flex-column gap-5">
+    <h1 class="w-100 text-center">Productos</h1>
+    <div class="d-flex gap-5 products-filters">
+        <div class="form-floating w-100">
+            <input class="form-control" placeholder="Leave a comment here" id="search" @bind="Search"/>
+            <label for="search">Busqueda</label>
+        </div>
+        <select class="form-select products-form-select" aria-label="Default select example" @bind="Category">
+            <option selected>Filtrar por categoria</option>
+            @foreach (Category category in Categories)
+            {
+                <option value="@category.Id">@category.Name</option>
+            }
+        </select>
+        <button class="btn btn-primary">
+            Buscar
+        </button>
+    </div>
+    <div class="d-flex flex-wrap gap-5">
+        <ProductCard
+            Id="1"
+            Name="Luis"
+            Image="https://media.falabella.com/falabellaCO/147573839_01/w=200,h=200,fit=pad"
+            Price="4000"
+            Slug="luis"
+            Description="Productos"/>
+    </div>
+
+</div>
+
+@code{
+
+    public string Search { get; set; }
+    public string Category { get; set; }
+
+    public List<Category> Categories { get; set; } = new List<Category>([
+        new Category()
+        {
+            Id = "1",
+            Name = "Electrodomestico"
+        },
+        new Category()
+        {
+            Id = "2",
+            Name = "Aseo"
+        },
+        new Category()
+        {
+            Id = "3",
+            Name = "Perfumeria"
+        }
+    ]);
+
+    protected override async Task OnInitializedAsync()
+    {
+        @* var client = ClientFactory.CreateClient("api");
+        var data = await client.GetFromJsonAsync<List<Category>>("api/Category");
+        Categories = data ?? new List<Category>(); *@
+        await base.OnInitializedAsync();
+    }
+
+
+}

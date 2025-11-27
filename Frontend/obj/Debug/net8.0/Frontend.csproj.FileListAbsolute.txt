@@ -18,11 +18,6 @@
 /mnt/almacenamiento/darius1751/Escritorio/programacion/profin/Frontend/obj/Debug/net8.0/rjsmcshtml.dswa.cache.json
 /mnt/almacenamiento/darius1751/Escritorio/programacion/profin/Frontend/obj/Debug/net8.0/scopedcss/Components/Layout/MainLayout.razor.rz.scp.css
 /mnt/almacenamiento/darius1751/Escritorio/programacion/profin/Frontend/obj/Debug/net8.0/scopedcss/Components/Layout/NavMenu.razor.rz.scp.css
-/mnt/almacenamiento/darius1751/Escritorio/programacion/profin/Frontend/obj/Debug/net8.0/scopedcss/Components/Pages/Cart.razor.rz.scp.css
-/mnt/almacenamiento/darius1751/Escritorio/programacion/profin/Frontend/obj/Debug/net8.0/scopedcss/Components/Pages/CartItem.razor.rz.scp.css
-/mnt/almacenamiento/darius1751/Escritorio/programacion/profin/Frontend/obj/Debug/net8.0/scopedcss/Components/Pages/Home.razor.rz.scp.css
-/mnt/almacenamiento/darius1751/Escritorio/programacion/profin/Frontend/obj/Debug/net8.0/scopedcss/Components/Pages/Products{slug}.razor.rz.scp.css
-/mnt/almacenamiento/darius1751/Escritorio/programacion/profin/Frontend/obj/Debug/net8.0/scopedcss/Components/ProductCard.razor.rz.scp.css
 /mnt/almacenamiento/darius1751/Escritorio/programacion/profin/Frontend/obj/Debug/net8.0/scopedcss/bundle/Frontend.styles.css
 /mnt/almacenamiento/darius1751/Escritorio/programacion/profin/Frontend/obj/Debug/net8.0/scopedcss/projectbundle/Frontend.bundle.scp.css
 /mnt/almacenamiento/darius1751/Escritorio/programacion/profin/Frontend/obj/Debug/net8.0/staticwebassets.build.json
@@ -35,4 +30,10 @@
 /mnt/almacenamiento/darius1751/Escritorio/programacion/profin/Frontend/obj/Debug/net8.0/Frontend.pdb
 /mnt/almacenamiento/darius1751/Escritorio/programacion/profin/Frontend/obj/Debug/net8.0/Frontend.genruntimeconfig.cache
 /mnt/almacenamiento/darius1751/Escritorio/programacion/profin/Frontend/obj/Debug/net8.0/ref/Frontend.dll
-/mnt/almacenamiento/darius1751/Escritorio/programacion/profin/Frontend/obj/Debug/net8.0/scopedcss/Components/Pages/Register.razor.rz.scp.css
+/mnt/almacenamiento/darius1751/Escritorio/programacion/profin/Frontend/obj/Debug/net8.0/scopedcss/Components/Pages/Cart/Cart.razor.rz.scp.css
+/mnt/almacenamiento/darius1751/Escritorio/programacion/profin/Frontend/obj/Debug/net8.0/scopedcss/Components/Pages/Cart/CartItem/CartItem.razor.rz.scp.css
+/mnt/almacenamiento/darius1751/Escritorio/programacion/profin/Frontend/obj/Debug/net8.0/scopedcss/Components/Pages/Home/Home.razor.rz.scp.css
+/mnt/almacenamiento/darius1751/Escritorio/programacion/profin/Frontend/obj/Debug/net8.0/scopedcss/Components/Pages/Products/card/ProductCard.razor.rz.scp.css
+/mnt/almacenamiento/darius1751/Escritorio/programacion/profin/Frontend/obj/Debug/net8.0/scopedcss/Components/Pages/Products/{Slug}/Products{slug}.razor.rz.scp.css
+/mnt/almacenamiento/darius1751/Escritorio/programacion/profin/Frontend/obj/Debug/net8.0/scopedcss/Components/Pages/Register/Register.razor.rz.scp.css
+/mnt/almacenamiento/darius1751/Escritorio/programacion/profin/Frontend/obj/Debug/net8.0/scopedcss/Components/Pages/Products/Products.razor.rz.scp.css

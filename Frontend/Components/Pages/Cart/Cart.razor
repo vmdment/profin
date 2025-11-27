@@ -1,0 +1,73 @@
+﻿@page "/cart"
+@using Frontend.Components.Pages.Cart.CartItem
+@using Frontend.Models
+<PageTitle>Profin - Cart</PageTitle>
+<div class="d-flex flex-column gap-5">
+    <h1 class="w-100 text-center fw-bold">
+        Mi Carrito
+    </h1>
+    <div class="d-flex gap-5 flex-wrap">
+        <ul class="d-flex flex-column gap-3 cart-list">
+            @foreach (Product productInCart in ProductsInCart)
+            {
+                <CartItem Id="@productInCart.Id" Cant="@productInCart.Cant" Image="@productInCart.Image" Name="@productInCart.Name" Price="@productInCart.Price"/>
+            }
+        </ul>
+        <div class="cart-prebilling p-4">
+            <h2 class="text-center fw-bold">Factura</h2>
+            <div class="d-flex flex-column gap-5">
+                <div class="d-flex gap-1">
+                    Cantidad de productos:
+                    <span class="fw-bold">
+                        @(ProductsInCart.Sum((product) => product.Cant))
+                    </span>
+                </div>
+                <ul class="d-flex flex-column p-0 gap-3">
+                    @foreach (Product productInCart in ProductsInCart)
+                    {
+                        <li class="d-flex flex-column gap-2 product-billing">
+                            <div class="d-flex gap-2">
+                                <span class="fw-bold">@productInCart.Name </span>
+                                <span class="text-success fw-bold price">@productInCart.Price</span>
+                                x
+                                <span>@productInCart.Cant</span>
+                            </div>
+                            <span class="fw-bold price text-success">@(productInCart.Cant * productInCart.Price)</span>
+                        </li>
+                    }
+                </ul>
+                <div class="d-flex flex-column fw-bold">
+                    <h3 class="fw-bold">Total a pagar:</h3>
+                    <span class="total-payment price text-success">
+                        @(ProductsInCart.Sum((product) => product.Price * product.Cant))
+                    </span>
+                </div>
+                <button class="btn btn-primary fw-bold">Realizar compra</button>
+            </div>
+        </div>
+    </div>
+
+    @code{
+
+        public List<Product> ProductsInCart { get; set; } = new List<Product>([
+            new Product()
+            {
+                Id = "1",
+                Cant = 2,
+                Image = "https://portatil.com.co/wp-content/uploads/2023/10/hp15ef2512la-1-portatil.com_.co_.jpg",
+                Name = "Portatil",
+                Price = 4000
+            },
+            new Product()
+            {
+                Id = "2",
+                Cant = 1,
+                Image = "https://static.bidcom.com.ar/publicacionesML/productos/ABLUE104/1000x1000-ABLUE104.jpg",
+                Name = "Auriculares",
+                Price = 2500
+            }
+        ]);
+
+    }
+
+</div>
