@@ -1,73 +1,49 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using BackendProFinAPi.Config;
-using BackendProFinAPi.Models;
+﻿using BackendProFinAPi.Moldels.DTO; // Contiene LoginDTOcs
+using BackendProFinAPi.Services;
+using Microsoft.AspNetCore.Mvc;
+using System.Threading.Tasks;
 
-namespace BackendProFinAPi.Controllers
+[ApiController]
+[Route("api/[controller]")] // api/user
+public class UserController : ControllerBase
 {
-    [Route("api/[controller]")]
-    [ApiController]
-    public class UsersController : ControllerBase
+    private readonly IAuthService _authService;
+
+    public UserController(IAuthService authService)
     {
-        private readonly ApplicationDbContext _context;
-
-        public UsersController(ApplicationDbContext context)
-        {
-            _context = context;
-        }
-
-        [HttpGet]
-        public async Task<ActionResult<IEnumerable<UserModel>>> GetUsers()
-        {
-            return await _context.Users.ToListAsync();
-        }
-
-        [HttpGet("{id}")]
-        public async Task<ActionResult<UserModel>> GetUser(int id)
-        {
-            var user = await _context.Users.FindAsync(id);
-            if (user == null) return NotFound();
-            return user;
-        }
-
-        [HttpPost]
-        public async Task<ActionResult<UserModel>> PostUser(UserModel user)
-        {
-            // NOTA: En producción, aquí deberías hashear la contraseña antes de guardarla.
-            _context.Users.Add(user);
-            await _context.SaveChangesAsync();
-            return CreatedAtAction("GetUser", new { id = user.Id }, user);
-        }
-
-        [HttpPut("{id}")]
-        public async Task<IActionResult> PutUser(int id, UserModel user)
-        {
-            if (id != user.Id) return BadRequest();
-            _context.Entry(user).State = EntityState.Modified;
-
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!UserExists(id)) return NotFound();
-                else throw;
-            }
-            return NoContent();
-        }
-
-        [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteUser(int id)
-        {
-            var user = await _context.Users.FindAsync(id);
-            if (user == null) return NotFound();
-
-            _context.Users.Remove(user);
-            await _context.SaveChangesAsync();
-            return NoContent();
-        }
-
-        private bool UserExists(int id) => _context.Users.Any(e => e.Id == id);
+        _authService = authService;
     }
+
+    /// <summary>
+    /// Endpoint para registrar un nuevo usuario (utiliza LoginDTOcs como datos de entrada).
+    /// Aquí ocurre el Hashing con BCrypt.
+    /// </summary>
+    [HttpPost("register")] // POST api/user/register
+    public async Task<IActionResult> Register([FromBody] LoginDTOcs registerData)
+    {
+        if (!ModelState.IsValid)
+        {
+            return BadRequest(ModelState);
+        }
+
+        // El servicio maneja la creación del UserModel y el Hashing de la contraseña (BCrypt)
+        var newUser = await _authService.RegisterUserAsync(registerData);
+
+        if (newUser == null)
+        {
+            return Conflict(new { Message = "El correo electrónico ya está registrado." });
+        }
+
+        // Generar token después del registro
+        var token = _authService.GenerateJwtToken(newUser);
+
+        return Created($"api/user/{newUser.Id}", new
+        {
+            Message = "Registro exitoso.",
+            Token = token,
+            UserId = newUser.Id
+        });
+    }
+
+    // ... Otros métodos para gestionar usuarios ...
 }

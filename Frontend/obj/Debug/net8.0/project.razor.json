@@ -13,149 +13,75 @@
   "ProjectWorkspaceState": {
     "TagHelpers": [
       {
-        "HashCode": 127440408,
+        "HashCode": -1973072786,
         "Kind": "Components.Component",
-        "Name": "Frontend.Components.App",
+        "Name": "Frontend.Components.Pages.Dashboard.Dashboard",
         "AssemblyName": "Frontend",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "App"
+            "TagName": "Dashboard"
           }
         ],
         "Metadata": {
-          "Common.TypeName": "Frontend.Components.App",
-          "Common.TypeNameIdentifier": "App",
-          "Common.TypeNamespace": "Frontend.Components",
+          "Common.TypeName": "Frontend.Components.Pages.Dashboard.Dashboard",
+          "Common.TypeNameIdentifier": "Dashboard",
+          "Common.TypeNamespace": "Frontend.Components.Pages.Dashboard",
           "Runtime.Name": "Components.IComponent"
         }
       },
       {
-        "HashCode": -1639251765,
+        "HashCode": -446297132,
         "Kind": "Components.Component",
-        "Name": "Frontend.Components.App",
+        "Name": "Frontend.Components.Pages.Dashboard.Dashboard",
         "AssemblyName": "Frontend",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "Frontend.Components.App"
+            "TagName": "Frontend.Components.Pages.Dashboard.Dashboard"
           }
         ],
         "Metadata": {
-          "Common.TypeName": "Frontend.Components.App",
-          "Common.TypeNameIdentifier": "App",
-          "Common.TypeNamespace": "Frontend.Components",
+          "Common.TypeName": "Frontend.Components.Pages.Dashboard.Dashboard",
+          "Common.TypeNameIdentifier": "Dashboard",
+          "Common.TypeNamespace": "Frontend.Components.Pages.Dashboard",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch",
           "Runtime.Name": "Components.IComponent"
         }
       },
       {
-        "HashCode": 1743589538,
+        "HashCode": -761193846,
         "Kind": "Components.Component",
-        "Name": "Frontend.Components.Pages.Counter",
+        "Name": "Frontend.Components.Pages.Cart.Cart",
         "AssemblyName": "Frontend",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "Counter"
+            "TagName": "Cart"
           }
         ],
         "Metadata": {
-          "Common.TypeName": "Frontend.Components.Pages.Counter",
-          "Common.TypeNameIdentifier": "Counter",
-          "Common.TypeNamespace": "Frontend.Components.Pages",
+          "Common.TypeName": "Frontend.Components.Pages.Cart.Cart",
+          "Common.TypeNameIdentifier": "Cart",
+          "Common.TypeNamespace": "Frontend.Components.Pages.Cart",
           "Runtime.Name": "Components.IComponent"
         }
       },
       {
-        "HashCode": 395701342,
+        "HashCode": 2006807351,
         "Kind": "Components.Component",
-        "Name": "Frontend.Components.Pages.Counter",
+        "Name": "Frontend.Components.Pages.Cart.Cart",
         "AssemblyName": "Frontend",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "Frontend.Components.Pages.Counter"
+            "TagName": "Frontend.Components.Pages.Cart.Cart"
           }
         ],
         "Metadata": {
-          "Common.TypeName": "Frontend.Components.Pages.Counter",
-          "Common.TypeNameIdentifier": "Counter",
-          "Common.TypeNamespace": "Frontend.Components.Pages",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch",
-          "Runtime.Name": "Components.IComponent"
-        }
-      },
-      {
-        "HashCode": -1062908997,
-        "Kind": "Components.Component",
-        "Name": "Frontend.Components.Pages.Error",
-        "AssemblyName": "Frontend",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Error"
-          }
-        ],
-        "Metadata": {
-          "Common.TypeName": "Frontend.Components.Pages.Error",
-          "Common.TypeNameIdentifier": "Error",
-          "Common.TypeNamespace": "Frontend.Components.Pages",
-          "Runtime.Name": "Components.IComponent"
-        }
-      },
-      {
-        "HashCode": 960115355,
-        "Kind": "Components.Component",
-        "Name": "Frontend.Components.Pages.Error",
-        "AssemblyName": "Frontend",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Frontend.Components.Pages.Error"
-          }
-        ],
-        "Metadata": {
-          "Common.TypeName": "Frontend.Components.Pages.Error",
-          "Common.TypeNameIdentifier": "Error",
-          "Common.TypeNamespace": "Frontend.Components.Pages",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch",
-          "Runtime.Name": "Components.IComponent"
-        }
-      },
-      {
-        "HashCode": -1580326258,
-        "Kind": "Components.Component",
-        "Name": "Frontend.Components.Pages.Weather",
-        "AssemblyName": "Frontend",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Weather"
-          }
-        ],
-        "Metadata": {
-          "Common.TypeName": "Frontend.Components.Pages.Weather",
-          "Common.TypeNameIdentifier": "Weather",
-          "Common.TypeNamespace": "Frontend.Components.Pages",
-          "Runtime.Name": "Components.IComponent"
-        }
-      },
-      {
-        "HashCode": -916383494,
-        "Kind": "Components.Component",
-        "Name": "Frontend.Components.Pages.Weather",
-        "AssemblyName": "Frontend",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Frontend.Components.Pages.Weather"
-          }
-        ],
-        "Metadata": {
-          "Common.TypeName": "Frontend.Components.Pages.Weather",
-          "Common.TypeNameIdentifier": "Weather",
-          "Common.TypeNamespace": "Frontend.Components.Pages",
+          "Common.TypeName": "Frontend.Components.Pages.Cart.Cart",
+          "Common.TypeNameIdentifier": "Cart",
+          "Common.TypeNamespace": "Frontend.Components.Pages.Cart",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch",
           "Runtime.Name": "Components.IComponent"
         }
@@ -287,80 +213,6 @@
           "Common.TypeName": "Frontend.Components.Pages.Cart.CartItem.CartItem",
           "Common.TypeNameIdentifier": "CartItem",
           "Common.TypeNamespace": "Frontend.Components.Pages.Cart.CartItem",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch",
-          "Runtime.Name": "Components.IComponent"
-        }
-      },
-      {
-        "HashCode": -761193846,
-        "Kind": "Components.Component",
-        "Name": "Frontend.Components.Pages.Cart.Cart",
-        "AssemblyName": "Frontend",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Cart"
-          }
-        ],
-        "Metadata": {
-          "Common.TypeName": "Frontend.Components.Pages.Cart.Cart",
-          "Common.TypeNameIdentifier": "Cart",
-          "Common.TypeNamespace": "Frontend.Components.Pages.Cart",
-          "Runtime.Name": "Components.IComponent"
-        }
-      },
-      {
-        "HashCode": 2006807351,
-        "Kind": "Components.Component",
-        "Name": "Frontend.Components.Pages.Cart.Cart",
-        "AssemblyName": "Frontend",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Frontend.Components.Pages.Cart.Cart"
-          }
-        ],
-        "Metadata": {
-          "Common.TypeName": "Frontend.Components.Pages.Cart.Cart",
-          "Common.TypeNameIdentifier": "Cart",
-          "Common.TypeNamespace": "Frontend.Components.Pages.Cart",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch",
-          "Runtime.Name": "Components.IComponent"
-        }
-      },
-      {
-        "HashCode": -1065778645,
-        "Kind": "Components.Component",
-        "Name": "Frontend.Components.Pages.Home.Home",
-        "AssemblyName": "Frontend",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Home"
-          }
-        ],
-        "Metadata": {
-          "Common.TypeName": "Frontend.Components.Pages.Home.Home",
-          "Common.TypeNameIdentifier": "Home",
-          "Common.TypeNamespace": "Frontend.Components.Pages.Home",
-          "Runtime.Name": "Components.IComponent"
-        }
-      },
-      {
-        "HashCode": -450189257,
-        "Kind": "Components.Component",
-        "Name": "Frontend.Components.Pages.Home.Home",
-        "AssemblyName": "Frontend",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Frontend.Components.Pages.Home.Home"
-          }
-        ],
-        "Metadata": {
-          "Common.TypeName": "Frontend.Components.Pages.Home.Home",
-          "Common.TypeNameIdentifier": "Home",
-          "Common.TypeNamespace": "Frontend.Components.Pages.Home",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch",
           "Runtime.Name": "Components.IComponent"
         }
@@ -611,6 +463,154 @@
         }
       },
       {
+        "HashCode": 1743589538,
+        "Kind": "Components.Component",
+        "Name": "Frontend.Components.Pages.Counter",
+        "AssemblyName": "Frontend",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Counter"
+          }
+        ],
+        "Metadata": {
+          "Common.TypeName": "Frontend.Components.Pages.Counter",
+          "Common.TypeNameIdentifier": "Counter",
+          "Common.TypeNamespace": "Frontend.Components.Pages",
+          "Runtime.Name": "Components.IComponent"
+        }
+      },
+      {
+        "HashCode": 395701342,
+        "Kind": "Components.Component",
+        "Name": "Frontend.Components.Pages.Counter",
+        "AssemblyName": "Frontend",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Frontend.Components.Pages.Counter"
+          }
+        ],
+        "Metadata": {
+          "Common.TypeName": "Frontend.Components.Pages.Counter",
+          "Common.TypeNameIdentifier": "Counter",
+          "Common.TypeNamespace": "Frontend.Components.Pages",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch",
+          "Runtime.Name": "Components.IComponent"
+        }
+      },
+      {
+        "HashCode": -1062908997,
+        "Kind": "Components.Component",
+        "Name": "Frontend.Components.Pages.Error",
+        "AssemblyName": "Frontend",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Error"
+          }
+        ],
+        "Metadata": {
+          "Common.TypeName": "Frontend.Components.Pages.Error",
+          "Common.TypeNameIdentifier": "Error",
+          "Common.TypeNamespace": "Frontend.Components.Pages",
+          "Runtime.Name": "Components.IComponent"
+        }
+      },
+      {
+        "HashCode": 960115355,
+        "Kind": "Components.Component",
+        "Name": "Frontend.Components.Pages.Error",
+        "AssemblyName": "Frontend",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Frontend.Components.Pages.Error"
+          }
+        ],
+        "Metadata": {
+          "Common.TypeName": "Frontend.Components.Pages.Error",
+          "Common.TypeNameIdentifier": "Error",
+          "Common.TypeNamespace": "Frontend.Components.Pages",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch",
+          "Runtime.Name": "Components.IComponent"
+        }
+      },
+      {
+        "HashCode": -1065778645,
+        "Kind": "Components.Component",
+        "Name": "Frontend.Components.Pages.Home.Home",
+        "AssemblyName": "Frontend",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Home"
+          }
+        ],
+        "Metadata": {
+          "Common.TypeName": "Frontend.Components.Pages.Home.Home",
+          "Common.TypeNameIdentifier": "Home",
+          "Common.TypeNamespace": "Frontend.Components.Pages.Home",
+          "Runtime.Name": "Components.IComponent"
+        }
+      },
+      {
+        "HashCode": -450189257,
+        "Kind": "Components.Component",
+        "Name": "Frontend.Components.Pages.Home.Home",
+        "AssemblyName": "Frontend",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Frontend.Components.Pages.Home.Home"
+          }
+        ],
+        "Metadata": {
+          "Common.TypeName": "Frontend.Components.Pages.Home.Home",
+          "Common.TypeNameIdentifier": "Home",
+          "Common.TypeNamespace": "Frontend.Components.Pages.Home",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch",
+          "Runtime.Name": "Components.IComponent"
+        }
+      },
+      {
+        "HashCode": -1580326258,
+        "Kind": "Components.Component",
+        "Name": "Frontend.Components.Pages.Weather",
+        "AssemblyName": "Frontend",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Weather"
+          }
+        ],
+        "Metadata": {
+          "Common.TypeName": "Frontend.Components.Pages.Weather",
+          "Common.TypeNameIdentifier": "Weather",
+          "Common.TypeNamespace": "Frontend.Components.Pages",
+          "Runtime.Name": "Components.IComponent"
+        }
+      },
+      {
+        "HashCode": -916383494,
+        "Kind": "Components.Component",
+        "Name": "Frontend.Components.Pages.Weather",
+        "AssemblyName": "Frontend",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Frontend.Components.Pages.Weather"
+          }
+        ],
+        "Metadata": {
+          "Common.TypeName": "Frontend.Components.Pages.Weather",
+          "Common.TypeNameIdentifier": "Weather",
+          "Common.TypeNamespace": "Frontend.Components.Pages",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch",
+          "Runtime.Name": "Components.IComponent"
+        }
+      },
+      {
         "HashCode": 1061579807,
         "Kind": "Components.Component",
         "Name": "Frontend.Components.Pages.Register.Register",
@@ -643,80 +643,6 @@
           "Common.TypeName": "Frontend.Components.Pages.Register.Register",
           "Common.TypeNameIdentifier": "Register",
           "Common.TypeNamespace": "Frontend.Components.Pages.Register",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch",
-          "Runtime.Name": "Components.IComponent"
-        }
-      },
-      {
-        "HashCode": -1973072786,
-        "Kind": "Components.Component",
-        "Name": "Frontend.Components.Pages.Dashboard.Dashboard",
-        "AssemblyName": "Frontend",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Dashboard"
-          }
-        ],
-        "Metadata": {
-          "Common.TypeName": "Frontend.Components.Pages.Dashboard.Dashboard",
-          "Common.TypeNameIdentifier": "Dashboard",
-          "Common.TypeNamespace": "Frontend.Components.Pages.Dashboard",
-          "Runtime.Name": "Components.IComponent"
-        }
-      },
-      {
-        "HashCode": -446297132,
-        "Kind": "Components.Component",
-        "Name": "Frontend.Components.Pages.Dashboard.Dashboard",
-        "AssemblyName": "Frontend",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Frontend.Components.Pages.Dashboard.Dashboard"
-          }
-        ],
-        "Metadata": {
-          "Common.TypeName": "Frontend.Components.Pages.Dashboard.Dashboard",
-          "Common.TypeNameIdentifier": "Dashboard",
-          "Common.TypeNamespace": "Frontend.Components.Pages.Dashboard",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch",
-          "Runtime.Name": "Components.IComponent"
-        }
-      },
-      {
-        "HashCode": -1228566442,
-        "Kind": "Components.Component",
-        "Name": "Frontend.Components.Routes",
-        "AssemblyName": "Frontend",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Routes"
-          }
-        ],
-        "Metadata": {
-          "Common.TypeName": "Frontend.Components.Routes",
-          "Common.TypeNameIdentifier": "Routes",
-          "Common.TypeNamespace": "Frontend.Components",
-          "Runtime.Name": "Components.IComponent"
-        }
-      },
-      {
-        "HashCode": -2116884111,
-        "Kind": "Components.Component",
-        "Name": "Frontend.Components.Routes",
-        "AssemblyName": "Frontend",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Frontend.Components.Routes"
-          }
-        ],
-        "Metadata": {
-          "Common.TypeName": "Frontend.Components.Routes",
-          "Common.TypeNameIdentifier": "Routes",
-          "Common.TypeNamespace": "Frontend.Components",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch",
           "Runtime.Name": "Components.IComponent"
         }
@@ -860,6 +786,80 @@
           "Common.TypeName": "Frontend.Components.Layout.NavMenu",
           "Common.TypeNameIdentifier": "NavMenu",
           "Common.TypeNamespace": "Frontend.Components.Layout",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch",
+          "Runtime.Name": "Components.IComponent"
+        }
+      },
+      {
+        "HashCode": 127440408,
+        "Kind": "Components.Component",
+        "Name": "Frontend.Components.App",
+        "AssemblyName": "Frontend",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "App"
+          }
+        ],
+        "Metadata": {
+          "Common.TypeName": "Frontend.Components.App",
+          "Common.TypeNameIdentifier": "App",
+          "Common.TypeNamespace": "Frontend.Components",
+          "Runtime.Name": "Components.IComponent"
+        }
+      },
+      {
+        "HashCode": -1639251765,
+        "Kind": "Components.Component",
+        "Name": "Frontend.Components.App",
+        "AssemblyName": "Frontend",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Frontend.Components.App"
+          }
+        ],
+        "Metadata": {
+          "Common.TypeName": "Frontend.Components.App",
+          "Common.TypeNameIdentifier": "App",
+          "Common.TypeNamespace": "Frontend.Components",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch",
+          "Runtime.Name": "Components.IComponent"
+        }
+      },
+      {
+        "HashCode": -1228566442,
+        "Kind": "Components.Component",
+        "Name": "Frontend.Components.Routes",
+        "AssemblyName": "Frontend",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Routes"
+          }
+        ],
+        "Metadata": {
+          "Common.TypeName": "Frontend.Components.Routes",
+          "Common.TypeNameIdentifier": "Routes",
+          "Common.TypeNamespace": "Frontend.Components",
+          "Runtime.Name": "Components.IComponent"
+        }
+      },
+      {
+        "HashCode": -2116884111,
+        "Kind": "Components.Component",
+        "Name": "Frontend.Components.Routes",
+        "AssemblyName": "Frontend",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Frontend.Components.Routes"
+          }
+        ],
+        "Metadata": {
+          "Common.TypeName": "Frontend.Components.Routes",
+          "Common.TypeNameIdentifier": "Routes",
+          "Common.TypeNamespace": "Frontend.Components",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch",
           "Runtime.Name": "Components.IComponent"
         }

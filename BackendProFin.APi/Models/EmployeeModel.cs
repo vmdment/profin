@@ -3,18 +3,8 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace BackendProFinAPi.Models
 {
-    public class EmployeeModel
+    public class EmployeeModel:PersonModel
     {
-        [Key]
-        public int Id { get; set; }
-
-        [Required]
-        [MaxLength(100)]
-        public string FirstName { get; set; }
-
-        [Required]
-        [MaxLength(100)]
-        public string LastName { get; set; }
 
         [MaxLength(50)]
         public string Position { get; set; }

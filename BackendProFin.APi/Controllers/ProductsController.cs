@@ -1,10 +1,16 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authorization; // 🔑 Agregado para usar [Authorize]
 using BackendProFinAPi.Config;
 using BackendProFinAPi.Models;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using System.Linq;
 
 namespace BackendProFinAPi.Controllers
 {
+    // [Authorize] a nivel de clase: Exige un token JWT válido para acceder a cualquier método.
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class ProductsController : ControllerBase
@@ -16,24 +22,29 @@ namespace BackendProFinAPi.Controllers
             _context = context;
         }
 
-        // GET: api/Products
+        // ---------------------------------------------------------------------
+        // 1. OBTENER LISTA DE PRODUCTOS (Roles: Customer, Employee)
+        // ---------------------------------------------------------------------
+        // El acceso a la lista de productos debe ser consultable por los clientes.
         [HttpGet]
+        [Authorize(Roles = "Employee,Customer")]
         public async Task<ActionResult<IEnumerable<ProductModel>>> GetProducts()
         {
-            // Incluimos datos relacionados (Tipo y Creador) para una respuesta más completa
             return await _context.Products
                 .Include(p => p.ProductType)
-                .Include(p => p.Creator)
                 .ToListAsync();
         }
 
-        // GET: api/Products/5
+        // ---------------------------------------------------------------------
+        // 2. OBTENER PRODUCTO POR ID (Roles: Customer, Employee)
+        // ---------------------------------------------------------------------
+        // Un cliente o un empleado puede ver el detalle de un producto específico.
         [HttpGet("{id}")]
+        [Authorize(Roles = "Employee,Customer")]
         public async Task<ActionResult<ProductModel>> GetProduct(int id)
         {
             var product = await _context.Products
                 .Include(p => p.ProductType)
-                .Include(p => p.Creator)
                 .FirstOrDefaultAsync(m => m.Id == id);
 
             if (product == null) return NotFound();
@@ -41,19 +52,26 @@ namespace BackendProFinAPi.Controllers
             return product;
         }
 
-        // POST: api/Products
+        // ---------------------------------------------------------------------
+        // 3. CREAR PRODUCTO (Rol: Employee)
+        // ---------------------------------------------------------------------
+        // Solo los empleados pueden crear nuevos productos en el catálogo.
         [HttpPost]
+        [Authorize(Roles = "Employee")]
         public async Task<ActionResult<ProductModel>> PostProduct(ProductModel product)
         {
-            // Validamos que existan las referencias foráneas si es necesario
             _context.Products.Add(product);
             await _context.SaveChangesAsync();
 
             return CreatedAtAction("GetProduct", new { id = product.Id }, product);
         }
 
-        // PUT: api/Products/5
+        // ---------------------------------------------------------------------
+        // 4. ACTUALIZAR PRODUCTO (Rol: Employee)
+        // ---------------------------------------------------------------------
+        // Solo los empleados pueden modificar los productos existentes.
         [HttpPut("{id}")]
+        [Authorize(Roles = "Employee")]
         public async Task<IActionResult> PutProduct(int id, ProductModel product)
         {
             if (id != product.Id) return BadRequest();
@@ -71,8 +89,12 @@ namespace BackendProFinAPi.Controllers
             return NoContent();
         }
 
-        // DELETE: api/Products/5
+        // ---------------------------------------------------------------------
+        // 5. ELIMINAR PRODUCTO (Rol: Employee)
+        // ---------------------------------------------------------------------
+        // Solo los empleados pueden eliminar productos.
         [HttpDelete("{id}")]
+        [Authorize(Roles = "Employee")]
         public async Task<IActionResult> DeleteProduct(int id)
         {
             var product = await _context.Products.FindAsync(id);
