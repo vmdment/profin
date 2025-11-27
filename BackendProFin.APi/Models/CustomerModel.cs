@@ -1,25 +1,17 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using BackendProFinAPi.Models; // Asegúrate de que el namespace del enum sea accesible
 
 namespace BackendProFinAPi.Models
 {
-    public class CustomerModel
+    public class CustomerModel : PersonModel
     {
-        [Key]
-        public int Id { get; set; }
+        // --- Nueva Propiedad para el Rol del Cliente ---
 
-        [Required]
-        [MaxLength(100)]
-        public string FirstName { get; set; }
-
-        [Required]
-        [MaxLength(100)]
-        public string LastName { get; set; }
-
-        [MaxLength(20)]
-        public string? PhoneNumber { get; set; }
-
-        [MaxLength(255)]
-        public string? Address { get; set; }
+        // El 'enum' CustomerRole se usa para tipificar esta propiedad.
+        // Por convención, es bueno inicializarlo con un valor por defecto si es aplicable, 
+        // o dejar que el valor predeterminado (el primer elemento, que es 'Standard' en este caso) sea asignado.
+        [Required] // Opcional: Asegura que el campo sea obligatorio en la base de datos/modelo
+        public CustomerRole Role { get; set; } = CustomerRole.Standard;
 
         // --- Propiedades de Navegación ---
 

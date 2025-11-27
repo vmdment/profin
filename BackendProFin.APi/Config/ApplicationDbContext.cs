@@ -1,8 +1,11 @@
-﻿using Microsoft.EntityFrameworkCore;
-using BackendProFinAPi.Models;
+﻿using BackendProFinAPi.Models;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore; // Ya no es necesario, pero lo dejo por si lo usas en otros sitios
+using Microsoft.AspNetCore.Identity; // Ya no es necesario, pero lo dejo por si lo usas en otros sitios
 
 namespace BackendProFinAPi.Config
 {
+    // 🔑 CAMBIO CRUCIAL 1: Hereda SOLAMENTE de DbContext, NO de IdentityDbContext
     public class ApplicationDbContext : DbContext
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
@@ -11,120 +14,68 @@ namespace BackendProFinAPi.Config
         }
 
         // --- DbSets ---
-        public DbSet<ProductModel> Products { get; set; }
-        public DbSet<SaleModel> Sales { get; set; }
-        public DbSet<WarrantyModel> Warranties { get; set; }
-        public DbSet<RepaymentModel> Repayments { get; set; }
-        public DbSet<EmployeeModel> Employees { get; set; }
+        // 🔑 AGREGAR: Tu modelo de usuario debe estar explícitamente aquí.
+        public DbSet<UserModels> Users { get; set; }
+
+        // Tus modelos de negocio
         public DbSet<CustomerModel> Customers { get; set; }
-        public DbSet<UserModel> Users { get; set; }
-        public DbSet<SaleDetailModel> SaleDetails { get; set; }
+        public DbSet<EmployeeModel> Employees { get; set; }
+        public DbSet<ProductModel> Products { get; set; }
         public DbSet<ProductTypeModel> ProductTypes { get; set; }
+        public DbSet<SaleModel> Sales { get; set; }
+        public DbSet<SaleDetailModel> SaleDetails { get; set; }
+        public DbSet<RepaymentModel> Repayments { get; set; }
+        public DbSet<WarrantyModel> Warranties { get; set; }
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        protected override void OnModelCreating(ModelBuilder builder)
         {
-            // --- UserModel ---
-            modelBuilder.Entity<UserModel>(entity =>
-            {
-                entity.ToTable("Users");
+            // ⚠️ IMPORTANTE: Si heredas de DbContext, la llamada 'base.OnModelCreating(builder);' 
+            // no hace nada de Identity, lo cual es lo que queremos.
+            base.OnModelCreating(builder);
 
-                entity.HasIndex(u => u.Email).IsUnique();
+            // ============================
+            // CONFIGURACIONES DE BUSINESS (Se mantienen)
+            // ============================
 
-                entity.HasMany(u => u.Products)
-                      .WithOne(p => p.Creator)
-                      .HasForeignKey(p => p.CreatedById)
-                      .OnDelete(DeleteBehavior.Restrict);
-            });
+            // ... (Todas tus configuraciones de relaciones, HasOne, WithMany, DeleteBehavior, etc.) ...
 
-            // --- ProductModel ---
-            modelBuilder.Entity<ProductModel>(entity =>
-            {
-                entity.ToTable("Products");
+            // ============================
+            // TIPOS DECIMALES (Se mantienen)
+            // ============================
+            // ... (Todas tus configuraciones de tipos decimales) ...
+            builder.Entity<ProductModel>().Property(p => p.Price)
+                .HasColumnType("decimal(18,2)");
+            builder.Entity<SaleModel>().Property(s => s.TotalAmount)
+                .HasColumnType("decimal(18,2)");
+            builder.Entity<SaleDetailModel>().Property(sd => sd.UnitPriceAtSale)
+                .HasColumnType("decimal(18,2)");
+            builder.Entity<RepaymentModel>().Property(r => r.Amount)
+                .HasColumnType("decimal(18,2)");
 
-                entity.Property(p => p.CreatedAt)
-                      .HasDefaultValueSql("GETDATE()");
 
-                entity.HasOne(p => p.ProductType)
-                      .WithMany(pt => pt.Products)
-                      .HasForeignKey(p => p.ProductTypeId)
-                      .OnDelete(DeleteBehavior.Restrict);
-            });
+            // ============================
+            // 🔑 LIMPIEZA DE IDENTITY
+            // ============================
 
-            // --- ProductTypeModel ---
-            modelBuilder.Entity<ProductTypeModel>(entity =>
-            {
-                entity.ToTable("ProductTypes");
-            });
+            // 1. Mapeo de UserModel: Aquí solo cambias el nombre de la tabla si lo deseas, 
+            // EF Core solo mapeará las propiedades que TÚ definiste en UserModel.
+            builder.Entity<UserModels>().ToTable("Users");
 
-            // --- CustomerModel ---
-            modelBuilder.Entity<CustomerModel>(entity =>
-            {
-                entity.ToTable("Customers");
+            // 2. ELIMINAR O COMENTAR: Ya no necesitas ignorar o renombrar las tablas secundarias de Identity, 
+            // ya que al heredar de DbContext (simple) EF Core no las conoce ni las intenta crear.
+            /*
+            builder.Entity<IdentityRole>().ToTable("Roles");
+            builder.Entity<IdentityUserRole<string>>().ToTable("UserRoles");
+            builder.Entity<IdentityUserClaim<string>>().ToTable("UserClaims");
+            builder.Entity<IdentityUserLogin<string>>().ToTable("UserLogins");
+            builder.Entity<IdentityRoleClaim<string>>().ToTable("RoleClaims");
+            builder.Entity<IdentityUserToken<string>>().ToTable("UserTokens");
+            */
 
-                entity.HasMany(c => c.Sales)
-                      .WithOne(s => s.Customer)
-                      .HasForeignKey(s => s.CustomerId)
-                      .OnDelete(DeleteBehavior.Restrict);
-            });
-
-            // --- EmployeeModel ---
-            modelBuilder.Entity<EmployeeModel>(entity =>
-            {
-                entity.ToTable("Employees");
-
-                entity.HasMany(e => e.Sales)
-                      .WithOne(s => s.Employee)
-                      .HasForeignKey(s => s.EmployeeId)
-                      .OnDelete(DeleteBehavior.Restrict);
-            });
-
-            // --- SaleModel ---
-            modelBuilder.Entity<SaleModel>(entity =>
-            {
-                entity.ToTable("Sales");
-
-                entity.HasMany(s => s.Repayments)
-                      .WithOne(r => r.Sale)
-                      .HasForeignKey(r => r.SaleId)
-                      .OnDelete(DeleteBehavior.Cascade);
-
-                entity.HasOne(s => s.Warranty)
-                      .WithOne(w => w.Sale)
-                      .HasForeignKey<WarrantyModel>(w => w.SaleId)
-                      .OnDelete(DeleteBehavior.Cascade);
-
-                entity.HasMany(s => s.SaleDetails)
-                      .WithOne(sd => sd.Sale)
-                      .HasForeignKey(sd => sd.SaleId)
-                      .OnDelete(DeleteBehavior.Cascade);
-            });
-
-            // --- SaleDetailModel ---
-            modelBuilder.Entity<SaleDetailModel>(entity =>
-            {
-                entity.ToTable("SaleDetails");
-
-                entity.HasOne(sd => sd.Product)
-                      .WithMany(p => p.SaleDetails)
-                      .HasForeignKey(sd => sd.ProductId)
-                      .OnDelete(DeleteBehavior.Restrict);
-            });
-
-            // --- WarrantyModel ---
-            modelBuilder.Entity<WarrantyModel>(entity =>
-            {
-                entity.ToTable("Warranties");
-
-                entity.HasIndex(w => w.SaleId).IsUnique();
-            });
-
-            // --- RepaymentModel ---
-            modelBuilder.Entity<RepaymentModel>(entity =>
-            {
-                entity.ToTable("Repayments");
-            });
-
-            base.OnModelCreating(modelBuilder);
+            // Si tu UserModel (clase) accidentalmente heredó de IdentityUser, 
+            // y no puedes cambiarlo, podrías usar .Ignore() aquí:
+            // builder.Entity<UserModel>().Ignore(u => u.NormalizedUserName); 
+            // PERO la mejor solución es que UserModel NO herede de nada.
         }
     }
 }

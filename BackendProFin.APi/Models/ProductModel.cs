@@ -20,23 +20,19 @@ namespace BackendProFinAPi.Models
         [Required]
         [MaxLength(150)]
         public string Name { get; set; }
-
+        [Required]
         public string? Description { get; set; }
 
         [Column(TypeName = "decimal(18, 2)")]
+        [Required]
         public decimal Price { get; set; }
-
+        [Required]
         public int StockQuantity { get; set; }
 
         public DateTime CreatedAt { get; set; }
 
         // --- Clave Foránea y Propiedad de Navegación para el Creador (Mantenidas) ---
-        public int CreatedById { get; set; }
-        public UserModel Creator { get; set; } = null!;
-
-        // --- NUEVAS Clave Foránea y Propiedad de Navegación para el Tipo ---
-
-        // Clave Foránea: ID del tipo de producto al que pertenece
+       
         public int ProductTypeId { get; set; }
 
         // Propiedad de Navegación: El objeto ProductType real (Relación N:1)

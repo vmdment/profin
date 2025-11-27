@@ -39,7 +39,7 @@ namespace BackendProFinAPi.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutEmployee(int id, EmployeeModel employee)
+        public async Task<IActionResult> PutEmployee(string id, EmployeeModel employee)
         {
             if (id != employee.Id) return BadRequest();
             _context.Entry(employee).State = EntityState.Modified;
@@ -57,7 +57,7 @@ namespace BackendProFinAPi.Controllers
         }
 
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteEmployee(int id)
+        public async Task<IActionResult> DeleteEmployee(string id)
         {
             var employee = await _context.Employees.FindAsync(id);
             if (employee == null) return NotFound();
@@ -67,6 +67,6 @@ namespace BackendProFinAPi.Controllers
             return NoContent();
         }
 
-        private bool EmployeeExists(int id) => _context.Employees.Any(e => e.Id == id);
+        private bool EmployeeExists(string id) => _context.Employees.Any(e => e.Id == id);
     }
 }

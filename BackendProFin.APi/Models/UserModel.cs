@@ -1,12 +1,14 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.AspNetCore.Identity;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace BackendProFinAPi.Models
 {
-    public class UserModel
+    public class UserModels
     {
         [Key]
-        public int Id { get; set; }
+        [MaxLength(15)]
+        public string Id { get; set; }
 
         [Required]
         [MaxLength(100)]
@@ -22,11 +24,8 @@ namespace BackendProFinAPi.Models
 
         // --- Propiedades de Navegación ---
 
-        // Productos que este usuario ha creado/registrado (Relación 1:N)
-        public ICollection<ProductModel> Products { get; set; } = new List<ProductModel>();
+        
+       
 
-        // Si Employee y User son la misma entidad lógica con diferentes roles/propiedades, 
-        // puedes usar una relación 1:1.
-        // public EmployeeModel? Employee { get; set; }
     }
 }

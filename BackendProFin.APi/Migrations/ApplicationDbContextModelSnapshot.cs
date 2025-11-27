@@ -17,22 +17,24 @@ namespace BackendProFinAPi.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "9.0.10")
+                .HasAnnotation("ProductVersion", "8.0.0")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
             modelBuilder.Entity("BackendProFinAPi.Models.CustomerModel", b =>
                 {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                    b.Property<string>("Id")
+                        .HasMaxLength(15)
+                        .HasColumnType("nvarchar(15)");
 
                     b.Property<string>("Address")
-                        .HasMaxLength(255)
-                        .HasColumnType("nvarchar(255)");
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("FirstName")
                         .IsRequired()
@@ -45,21 +47,30 @@ namespace BackendProFinAPi.Migrations
                         .HasColumnType("nvarchar(100)");
 
                     b.Property<string>("PhoneNumber")
-                        .HasMaxLength(20)
-                        .HasColumnType("nvarchar(20)");
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Role")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Customers", (string)null);
+                    b.ToTable("Customers");
                 });
 
             modelBuilder.Entity("BackendProFinAPi.Models.EmployeeModel", b =>
                 {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+                    b.Property<string>("Id")
+                        .HasMaxLength(15)
+                        .HasColumnType("nvarchar(15)");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                    b.Property<string>("Address")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("FirstName")
                         .IsRequired()
@@ -74,6 +85,10 @@ namespace BackendProFinAPi.Migrations
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
+                    b.Property<string>("PhoneNumber")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Position")
                         .IsRequired()
                         .HasMaxLength(50)
@@ -81,7 +96,7 @@ namespace BackendProFinAPi.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Employees", (string)null);
+                    b.ToTable("Employees");
                 });
 
             modelBuilder.Entity("BackendProFinAPi.Models.ProductModel", b =>
@@ -93,15 +108,16 @@ namespace BackendProFinAPi.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<DateTime>("CreatedAt")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("datetime2")
-                        .HasDefaultValueSql("GETDATE()");
-
-                    b.Property<int>("CreatedById")
-                        .HasColumnType("int");
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("Description")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Image")
+                        .IsRequired()
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -109,21 +125,24 @@ namespace BackendProFinAPi.Migrations
                         .HasColumnType("nvarchar(150)");
 
                     b.Property<decimal>("Price")
-                        .HasColumnType("decimal(18, 2)");
+                        .HasColumnType("decimal(18,2)");
 
                     b.Property<int>("ProductTypeId")
                         .HasColumnType("int");
+
+                    b.Property<string>("Slug")
+                        .IsRequired()
+                        .HasMaxLength(150)
+                        .HasColumnType("nvarchar(150)");
 
                     b.Property<int>("StockQuantity")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("CreatedById");
-
                     b.HasIndex("ProductTypeId");
 
-                    b.ToTable("Products", (string)null);
+                    b.ToTable("Products");
                 });
 
             modelBuilder.Entity("BackendProFinAPi.Models.ProductTypeModel", b =>
@@ -144,7 +163,7 @@ namespace BackendProFinAPi.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("ProductTypes", (string)null);
+                    b.ToTable("ProductTypes");
                 });
 
             modelBuilder.Entity("BackendProFinAPi.Models.RepaymentModel", b =>
@@ -156,7 +175,12 @@ namespace BackendProFinAPi.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<decimal>("Amount")
-                        .HasColumnType("decimal(18, 2)");
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<string>("PaymentMethod")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<DateTime>("RepaymentDate")
                         .HasColumnType("datetime2");
@@ -168,7 +192,7 @@ namespace BackendProFinAPi.Migrations
 
                     b.HasIndex("SaleId");
 
-                    b.ToTable("Repayments", (string)null);
+                    b.ToTable("Repayments");
                 });
 
             modelBuilder.Entity("BackendProFinAPi.Models.SaleDetailModel", b =>
@@ -189,7 +213,7 @@ namespace BackendProFinAPi.Migrations
                         .HasColumnType("int");
 
                     b.Property<decimal>("UnitPriceAtSale")
-                        .HasColumnType("decimal(18, 2)");
+                        .HasColumnType("decimal(18,2)");
 
                     b.HasKey("Id");
 
@@ -197,7 +221,7 @@ namespace BackendProFinAPi.Migrations
 
                     b.HasIndex("SaleId");
 
-                    b.ToTable("SaleDetails", (string)null);
+                    b.ToTable("SaleDetails");
                 });
 
             modelBuilder.Entity("BackendProFinAPi.Models.SaleModel", b =>
@@ -208,11 +232,13 @@ namespace BackendProFinAPi.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("CustomerId")
-                        .HasColumnType("int");
+                    b.Property<string>("CustomerId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(15)");
 
-                    b.Property<int>("EmployeeId")
-                        .HasColumnType("int");
+                    b.Property<string>("EmployeeId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(15)");
 
                     b.Property<string>("PaymentMethod")
                         .IsRequired()
@@ -223,7 +249,7 @@ namespace BackendProFinAPi.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<decimal>("TotalAmount")
-                        .HasColumnType("decimal(18, 2)");
+                        .HasColumnType("decimal(18,2)");
 
                     b.HasKey("Id");
 
@@ -231,16 +257,14 @@ namespace BackendProFinAPi.Migrations
 
                     b.HasIndex("EmployeeId");
 
-                    b.ToTable("Sales", (string)null);
+                    b.ToTable("Sales");
                 });
 
-            modelBuilder.Entity("BackendProFinAPi.Models.UserModel", b =>
+            modelBuilder.Entity("BackendProFinAPi.Models.UserModels", b =>
                 {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                    b.Property<string>("Id")
+                        .HasMaxLength(15)
+                        .HasColumnType("nvarchar(15)");
 
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
@@ -260,9 +284,6 @@ namespace BackendProFinAPi.Migrations
                         .HasColumnType("nvarchar(50)");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("Email")
-                        .IsUnique();
 
                     b.ToTable("Users", (string)null);
                 });
@@ -290,27 +311,18 @@ namespace BackendProFinAPi.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("SaleId")
-                        .IsUnique();
+                    b.HasIndex("SaleId");
 
-                    b.ToTable("Warranties", (string)null);
+                    b.ToTable("Warranties");
                 });
 
             modelBuilder.Entity("BackendProFinAPi.Models.ProductModel", b =>
                 {
-                    b.HasOne("BackendProFinAPi.Models.UserModel", "Creator")
-                        .WithMany("Products")
-                        .HasForeignKey("CreatedById")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
                     b.HasOne("BackendProFinAPi.Models.ProductTypeModel", "ProductType")
                         .WithMany("Products")
                         .HasForeignKey("ProductTypeId")
-                        .OnDelete(DeleteBehavior.Restrict)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.Navigation("Creator");
 
                     b.Navigation("ProductType");
                 });
@@ -331,7 +343,7 @@ namespace BackendProFinAPi.Migrations
                     b.HasOne("BackendProFinAPi.Models.ProductModel", "Product")
                         .WithMany("SaleDetails")
                         .HasForeignKey("ProductId")
-                        .OnDelete(DeleteBehavior.Restrict)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("BackendProFinAPi.Models.SaleModel", "Sale")
@@ -350,13 +362,13 @@ namespace BackendProFinAPi.Migrations
                     b.HasOne("BackendProFinAPi.Models.CustomerModel", "Customer")
                         .WithMany("Sales")
                         .HasForeignKey("CustomerId")
-                        .OnDelete(DeleteBehavior.Restrict)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("BackendProFinAPi.Models.EmployeeModel", "Employee")
                         .WithMany("Sales")
                         .HasForeignKey("EmployeeId")
-                        .OnDelete(DeleteBehavior.Restrict)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Customer");
@@ -367,8 +379,8 @@ namespace BackendProFinAPi.Migrations
             modelBuilder.Entity("BackendProFinAPi.Models.WarrantyModel", b =>
                 {
                     b.HasOne("BackendProFinAPi.Models.SaleModel", "Sale")
-                        .WithOne("Warranty")
-                        .HasForeignKey("BackendProFinAPi.Models.WarrantyModel", "SaleId")
+                        .WithMany("Warranties")
+                        .HasForeignKey("SaleId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -401,12 +413,7 @@ namespace BackendProFinAPi.Migrations
 
                     b.Navigation("SaleDetails");
 
-                    b.Navigation("Warranty");
-                });
-
-            modelBuilder.Entity("BackendProFinAPi.Models.UserModel", b =>
-                {
-                    b.Navigation("Products");
+                    b.Navigation("Warranties");
                 });
 #pragma warning restore 612, 618
         }
