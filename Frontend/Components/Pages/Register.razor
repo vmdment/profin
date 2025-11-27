@@ -1,0 +1,63 @@
+@page "/register"
+@using System.Text.Json
+@using FrontendProFin.Models
+@inject IHttpClientFactory ClientFactory
+<PageTitle>profin - register</PageTitle>
+<div>
+    <form class="d-flex flex-column gap-3 register" @onsubmit:preventDefault="true" @onsubmit="HandleRegisterCustomer">
+        <h2>Crear cuenta</h2>
+        <div>
+            <label for="name" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="name" placeholder="Ingresa tu nombre" @bind="Name">
+        </div>
+        <div>
+            <label for="phone" class="form-label">Telefono</label>
+            <input type="tel" class="form-control" id="phone" placeholder="Ingresa tu telefono" @bind="Phone">
+        </div>
+        <div>
+            <label for="address" class="form-label">Direccion</label>
+            <input type="text" class="form-control" id="address" placeholder="Cra 123#123-123" @bind="Address">
+        </div>
+        <div>
+            <label for="email" class="form-label">Correo electronico</label>
+            <input type="email" class="form-control" id="email" placeholder="Ingresa tu email" @bind="Email">
+        </div>
+        <div>
+            <label for="password" class="form-label">Contraseña</label>
+            <input type="password" id="password" class="form-control" aria-describedby="passwordHelpBlock" @bind="Password">
+        </div>
+        <div>
+            <label for="confirmPassword" class="form-label">Confirma tu contraseña</label>
+            <input type="password" id="confirmPassword" class="form-control" aria-describedby="passwordHelpBlock" @bind="ConfirmPassword">
+        </div>
+        <button class="btn btn-primary" type="submit">Registrarme</button>
+    </form>
+</div>
+
+
+@code
+{
+    public string Name { get; set; }
+    public string Phone { get; set; }
+    public string Address { get; set; }
+    public string Email { get; set; }
+    public string Password { get; set; }
+    public string ConfirmPassword { get; set; }
+
+    public async Task HandleRegisterCustomer(EventArgs ev)
+    {
+        @* if (Password == ConfirmPassword)
+        {
+            var client = ClientFactory.CreateClient("api");
+            var data = await client.PostAsJsonAsync("", JsonSerializer.Serialize(new
+            {
+                Name,
+                Phone,
+                Address,
+                Email,
+                Password
+            }));
+            await data.Content.ReadFromJsonAsync();
+        } *@
+    }
+}

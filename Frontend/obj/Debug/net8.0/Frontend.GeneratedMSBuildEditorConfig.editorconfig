@@ -1,0 +1,87 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetFrameworkIdentifier = .NETCoreApp
+build_property.TargetFrameworkVersion = v8.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Frontend
+build_property.RootNamespace = Frontend
+build_property.ProjectDir = /mnt/almacenamiento/darius1751/Escritorio/programacion/profin/Frontend/
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = /mnt/almacenamiento/darius1751/Escritorio/programacion/profin/Frontend
+build_property._RazorSourceGeneratorDebug = 
+build_property.EffectiveAnalysisLevelStyle = 8.0
+build_property.EnableCodeStyleSeverity = 
+
+[/mnt/almacenamiento/darius1751/Escritorio/programacion/profin/Frontend/Components/App.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9BcHAucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/mnt/almacenamiento/darius1751/Escritorio/programacion/profin/Frontend/Components/Pages/Counter.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9Db3VudGVyLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[/mnt/almacenamiento/darius1751/Escritorio/programacion/profin/Frontend/Components/Pages/Error copy.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9FcnJvciBjb3B5LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[/mnt/almacenamiento/darius1751/Escritorio/programacion/profin/Frontend/Components/Pages/Error.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9FcnJvci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/mnt/almacenamiento/darius1751/Escritorio/programacion/profin/Frontend/Components/Pages/Products.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9Qcm9kdWN0cy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/mnt/almacenamiento/darius1751/Escritorio/programacion/profin/Frontend/Components/Pages/Weather.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9XZWF0aGVyLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[/mnt/almacenamiento/darius1751/Escritorio/programacion/profin/Frontend/Components/Routes.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9Sb3V0ZXMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/mnt/almacenamiento/darius1751/Escritorio/programacion/profin/Frontend/Components/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9fSW1wb3J0cy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/mnt/almacenamiento/darius1751/Escritorio/programacion/profin/Frontend/Components/Layout/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9MYXlvdXQvTWFpbkxheW91dC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-46ojlnh66e
+
+[/mnt/almacenamiento/darius1751/Escritorio/programacion/profin/Frontend/Components/Layout/NavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9MYXlvdXQvTmF2TWVudS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-w6v3fayc1j
+
+[/mnt/almacenamiento/darius1751/Escritorio/programacion/profin/Frontend/Components/Pages/Cart.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9DYXJ0LnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-sverlnysv2
+
+[/mnt/almacenamiento/darius1751/Escritorio/programacion/profin/Frontend/Components/Pages/CartItem.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9DYXJ0SXRlbS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-6nl3l8wpr2
+
+[/mnt/almacenamiento/darius1751/Escritorio/programacion/profin/Frontend/Components/Pages/Home.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9Ib21lLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-cexk2q2fbd
+
+[/mnt/almacenamiento/darius1751/Escritorio/programacion/profin/Frontend/Components/Pages/Products\{slug\}.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9Qcm9kdWN0c3tzbHVnfS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-lmtnd89g9b
+
+[/mnt/almacenamiento/darius1751/Escritorio/programacion/profin/Frontend/Components/Pages/Register.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9SZWdpc3Rlci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-y94k47j5ld
+
+[/mnt/almacenamiento/darius1751/Escritorio/programacion/profin/Frontend/Components/ProductCard.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9Qcm9kdWN0Q2FyZC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-omkzpbzivh
