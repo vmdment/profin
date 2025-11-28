@@ -1,0 +1,23 @@
+.cart-product-image {
+    width: 4rem;
+}
+
+.cart-product {
+    width: 100%;
+    padding: 1.2rem;
+    border: 1px solid #38383d8c;
+    border-radius: 1.5rem;
+}
+
+.cart-product-price::before {
+    content: "$ ";
+}
+
+.btn-cart {
+    width: 1.5rem !important;
+    height: 1.5rem !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}

@@ -14,7 +14,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 
-
+// PATRON CREACIONAL
 var builder = WebApplication.CreateBuilder(args);
 
 // =========================================================================
@@ -37,7 +37,6 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(connectionString));
 
 // --- CONFIGURACIÓN DE IDENTIDAD Y SEGURIDAD ---
-
 
 
 

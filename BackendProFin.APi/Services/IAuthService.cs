@@ -1,5 +1,6 @@
 ﻿using BackendProFinAPi.Models;
-using BackendProFinAPi.Moldels.DTO;
+using BackendProFinAPi.Models.DTO;
+using BackendProFinAPi.Models.DAO;
 using BackendProFinAPi.Repositories;
 using Microsoft.AspNetCore.Identity; // Necesario para PasswordHasher y PasswordVerificationResult
 using Microsoft.Extensions.Configuration; // Necesario para IConfiguration
@@ -23,9 +24,9 @@ namespace BackendProFinAPi.Services
         bool VerifyPassword(string password, string hashedPassword);
 
         // Métodos principales de autenticación
-        Task<UserModels> RegisterUserAsync(LoginDTOcs registerData);
-        Task<UserModels> AuthenticateUserAsync(LoginDTOcs loginDto);
-        string GenerateJwtToken(UserModels user);
+        Task<RegisterDAO> RegisterUserAsync(RegisterDTO registerData);
+        Task<LoginDAO> AuthenticateUserAsync(LoginDTOcs loginDto);
+        string GenerateJwtToken(UpdateDAO user);
     }
 
     // -------------------------------------------------------------------------
@@ -36,7 +37,9 @@ namespace BackendProFinAPi.Services
     public class AuthService : IAuthService
     {
         private readonly IUserRepository _userRepository;
+
         private readonly IConfiguration _configuration;
+
         // 🔑 CORRECCIÓN: Usamos 'object' para desacoplarnos del modelo UserModel
         private readonly PasswordHasher<object> _passwordHasher;
 
@@ -74,10 +77,10 @@ namespace BackendProFinAPi.Services
         /// <summary>
         /// Registra un nuevo usuario en el sistema.
         /// </summary>
-        public async Task<UserModels> RegisterUserAsync(LoginDTOcs registerData)
+        public async Task<RegisterDAO> RegisterUserAsync(RegisterDTO registerData)
         {
             var existingUser = await _userRepository.GetUserByEmailAsync(registerData.Email);
-            if (existingUser != null)
+            if (existingUser == null)
             {
                 return null; // El usuario ya existe
             }
@@ -96,11 +99,22 @@ namespace BackendProFinAPi.Services
                 Role = "Customer", // ROL POR DEFECTO
                 CreatedAt = DateTime.Now
             };
-
+            var newCustomer = new CustomerModel()
+            {
+                Role = CustomerRole.Standard,
+                FirstName = registerData.FirstName,
+                LastName = registerData.LastName,
+                Address = registerData.Address,
+                Email = registerData.Email,
+                PhoneNumber = registerData.PhoneNumber
+            };
             // 3. Guardar el usuario
             await _userRepository.AddUserAsync(newUser);
-
-            return newUser;
+            await _userRepository.AddCustomerAsync(newCustomer);
+            return new RegisterDAO()
+            {
+                Model = newCustomer, Role = "Customer", UserModel = newUser
+            };
         }
 
         // --- Lógica de Autenticación (Login) ---
@@ -108,7 +122,7 @@ namespace BackendProFinAPi.Services
         /// <summary>
         /// Autentica un usuario verificando la contraseña.
         /// </summary>
-        public async Task<UserModels> AuthenticateUserAsync(LoginDTOcs loginDto)
+        public async Task<LoginDAO> AuthenticateUserAsync(LoginDTOcs loginDto)
         {
             var user = await _userRepository.GetUserByEmailAsync(loginDto.Email);
 
@@ -124,7 +138,14 @@ namespace BackendProFinAPi.Services
                 return null;
             }
 
-            return user;
+            PersonModel person;
+            if (user.Role == "Customer")
+                person = await _userRepository.GetCustomerByEmailAsync(loginDto.Email);
+            person = await _userRepository.GetEmployeeByEmailAsync(loginDto.Email);
+            return new LoginDAO()
+            {
+                Model = person, Role = user.Role, UserModel = user
+            };
         }
 
         // --- Lógica de Generación de Token JWT ---
@@ -132,7 +153,7 @@ namespace BackendProFinAPi.Services
         /// <summary>
         /// Genera un JSON Web Token (JWT) para el usuario autenticado.
         /// </summary>
-        public string GenerateJwtToken(UserModels user)
+        public string GenerateJwtToken(UpdateDAO updateDao)
         {
             var tokenHandler = new JwtSecurityTokenHandler();
 
@@ -148,9 +169,9 @@ namespace BackendProFinAPi.Services
             // 2. Definir los Claims
             var claims = new List<Claim>
             {
-                new Claim(ClaimTypes.NameIdentifier, user.Id),
-                new Claim(ClaimTypes.Email, user.Email),
-                new Claim(ClaimTypes.Role, user.Role ?? "Customer")
+                new Claim(ClaimTypes.NameIdentifier, updateDao.Model.Id),
+                new Claim(ClaimTypes.Email, updateDao.Model.Email),
+                new Claim(ClaimTypes.Role, updateDao.UserModel.Role ?? "Customer"),
             };
 
             // 3. Crear las credenciales del token

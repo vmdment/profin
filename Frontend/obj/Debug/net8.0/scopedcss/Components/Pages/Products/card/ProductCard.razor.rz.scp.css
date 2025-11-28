@@ -1,0 +1,8 @@
+.card-text[b-slwztqr207]{
+    text-overflow: ellipsis;
+    max-height: 4.5rem;
+    overflow: hidden;
+}
+.card-text[b-slwztqr207]::after{
+    content: "...";
+}

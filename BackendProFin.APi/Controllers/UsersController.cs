@@ -1,7 +1,7 @@
-﻿using BackendProFinAPi.Moldels.DTO; // Contiene LoginDTOcs
+﻿using BackendProFinAPi.Models.DTO; // Contiene LoginDTOcs
 using BackendProFinAPi.Services;
 using Microsoft.AspNetCore.Mvc;
-using System.Threading.Tasks;
+
 
 [ApiController]
 [Route("api/[controller]")] // api/user
@@ -19,7 +19,7 @@ public class UserController : ControllerBase
     /// Aquí ocurre el Hashing con BCrypt.
     /// </summary>
     [HttpPost("register")] // POST api/user/register
-    public async Task<IActionResult> Register([FromBody] LoginDTOcs registerData)
+    public async Task<IActionResult> Register([FromBody] RegisterDTO registerData)
     {
         if (!ModelState.IsValid)
         {
@@ -27,21 +27,21 @@ public class UserController : ControllerBase
         }
 
         // El servicio maneja la creación del UserModel y el Hashing de la contraseña (BCrypt)
-        var newUser = await _authService.RegisterUserAsync(registerData);
+        var registerDao = await _authService.RegisterUserAsync(registerData);
 
-        if (newUser == null)
+        if (registerDao == null)
         {
             return Conflict(new { Message = "El correo electrónico ya está registrado." });
         }
 
         // Generar token después del registro
-        var token = _authService.GenerateJwtToken(newUser);
+        var token = _authService.GenerateJwtToken(registerDao);
 
-        return Created($"api/user/{newUser.Id}", new
+        return Created($"api/user/{registerDao.Model.Id}", new
         {
             Message = "Registro exitoso.",
             Token = token,
-            UserId = newUser.Id
+            UserId = registerDao.Model.Id
         });
     }
 

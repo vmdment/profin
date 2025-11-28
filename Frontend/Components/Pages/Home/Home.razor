@@ -1,0 +1,50 @@
+﻿@page "/"
+@page "/login"
+@using System.Text.Json
+@using System.Text.RegularExpressions
+@using Frontend.Models
+@inject IHttpClientFactory ClientFactory
+@inject IJSRuntime JsRuntime
+<PageTitle>Home</PageTitle>
+
+<div>
+    <form class="d-flex flex-column gap-3 login" @onsubmit:preventDefault="true" @onsubmit="HandleLogin">
+        <h2>Login</h2>
+        <div>
+            <label for="exampleFormControlInput1" class="form-label">Email</label>
+            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+        </div>
+        <div>
+            <label for="inputPassword5" class="form-label">Password</label>
+            <input type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock">
+        </div>
+        <button class="btn btn-success">Iniciar sesion</button>
+        <a href="/register">Registrarme</a>
+    </form>
+</div>
+
+@code
+{
+    public string Email { get; set; }
+    public string Password { get; set; }
+
+    public async Task HandleLogin()
+    {
+        bool isValidEmail = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$").IsMatch(Email);
+        bool isValidPassword = Password.Trim().Length >= 8;
+        if (isValidEmail && isValidPassword)
+        {
+            var client = ClientFactory.CreateClient("api");
+            var data = await client.PostAsJsonAsync("login", JsonSerializer.Serialize(new
+            {
+                Email,
+                Password
+            }));
+            await data.Content.ReadFromJsonAsync<Login>();
+        }
+        else
+        {
+            await JsRuntime.InvokeVoidAsync("alert", "Debe completar todos los datos de forma correcta.");
+        }
+    }
+}

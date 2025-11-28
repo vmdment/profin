@@ -9,8 +9,6 @@ using System.Linq;
 
 namespace BackendProFinAPi.Controllers
 {
-    // [Authorize] a nivel de clase: Exige un token JWT válido para acceder a cualquier método.
-    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class ProductsController : ControllerBase
@@ -27,7 +25,6 @@ namespace BackendProFinAPi.Controllers
         // ---------------------------------------------------------------------
         // El acceso a la lista de productos debe ser consultable por los clientes.
         [HttpGet]
-        [Authorize(Roles = "Employee,Customer")]
         public async Task<ActionResult<IEnumerable<ProductModel>>> GetProducts()
         {
             return await _context.Products
@@ -40,7 +37,6 @@ namespace BackendProFinAPi.Controllers
         // ---------------------------------------------------------------------
         // Un cliente o un empleado puede ver el detalle de un producto específico.
         [HttpGet("{id}")]
-        [Authorize(Roles = "Employee,Customer")]
         public async Task<ActionResult<ProductModel>> GetProduct(int id)
         {
             var product = await _context.Products

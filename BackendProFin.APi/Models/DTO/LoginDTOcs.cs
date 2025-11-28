@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace BackendProFinAPi.Moldels.DTO
+namespace BackendProFinAPi.Models.DTO
 {
     public class LoginDTOcs
     {

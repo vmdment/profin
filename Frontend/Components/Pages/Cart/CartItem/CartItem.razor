@@ -1,0 +1,37 @@
+@rendermode InteractiveServer
+<li class="d-flex gap-4 align-items-end cart-product">
+    <img src="@Image" alt="@Name" class="cart-product-image"/>
+    <div class="d-flex flex-column gap-1">
+        <span>@Name</span>
+        <div class="d-flex gap-2">
+            <span>precio unidad: </span>
+            <span class="cart-product-price text-success">@Price</span>
+        </div>
+    </div>
+    <div class="d-flex flex-column gap-1 align-items-center">
+        <span class="cart-product-price text-success">@(Price * Cant)</span>
+        <div class="d-flex gap-2">
+            <button class="btn btn-primary rounded-circle btn-sm btn-cart" @onclick="() => HandleChangeCant(Id, Cant + 1)">+</button>
+            <span role="status">@Cant</span>
+            <button class="btn btn-danger rounded-circle btn-sm btn-cart" @onclick="() => HandleChangeCant(Id, Cant - 1)">-</button>
+        </div>
+    </div>
+    <div class="d-flex gap-2 align-items-end">
+        <button class="btn btn-link text-danger">Eliminar</button>
+    </div>
+</li>
+
+@code
+{
+    [Parameter] public string Id { get; set; }
+    [Parameter] public string Image { get; set; }
+    [Parameter] public string Name { get; set; }
+    [Parameter] public decimal Price { get; set; }
+    [Parameter] public int Cant { get; set; }
+
+    public void HandleChangeCant(string id, int cant)
+    {
+        if (cant > 0)
+            Cant = cant;
+    }
+}

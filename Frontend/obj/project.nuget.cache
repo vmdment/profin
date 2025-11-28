@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "B0U7K3JWE2Q=",
+  "success": true,
+  "projectFilePath": "/mnt/almacenamiento/darius1751/Escritorio/programacion/profin/Frontend/Frontend.csproj",
+  "expectedPackageFiles": [
+    "/home/darius1751/.nuget/packages/microsoft.netcore.app.ref/8.0.22/microsoft.netcore.app.ref.8.0.22.nupkg.sha512",
+    "/home/darius1751/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.22/microsoft.aspnetcore.app.ref.8.0.22.nupkg.sha512",
+    "/home/darius1751/.nuget/packages/microsoft.netcore.app.host.linux-x64/8.0.22/microsoft.netcore.app.host.linux-x64.8.0.22.nupkg.sha512"
+  ],
+  "logs": []
+}
