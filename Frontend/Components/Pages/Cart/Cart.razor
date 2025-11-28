@@ -1,6 +1,7 @@
 ﻿@page "/cart"
 @using Frontend.Components.Pages.Cart.CartItem
 @using Frontend.Models
+@using Frontend.Utils
 @inject IHttpClientFactory ClientFactory
 <PageTitle>Profin - Cart</PageTitle>
 <div class="d-flex flex-column gap-5">
@@ -71,9 +72,9 @@
 
         public async Task HandlePayment()
         {
-            @* var client = ClientFactory.CreateClient("api");
-            var data = await client.PostAsJsonAsync("sales", new {});
-            await data.Content.ReadFromJsonAsync<Payment>(); *@
+            var client = ClientFactory.CreateClient("api");
+            var data = await client.PostAsJsonAsync("sales", new JsonAdapter(new {}).Serializable);
+            await data.Content.ReadFromJsonAsync<Payment>();
         }
 
     }

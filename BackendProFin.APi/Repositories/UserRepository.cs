@@ -28,5 +28,22 @@ namespace BackendProFinAPi.Repositories
             _context.Users.Add(user);
             await _context.SaveChangesAsync();
         }
+
+        public async Task<CustomerModel> GetCustomerByEmailAsync(string email)
+        {
+            // Busca el usuario por email en la tabla Users de Identity
+            return await _context.Customers.FirstOrDefaultAsync(model => model.Email == email);
+        }
+
+        public async Task<EmployeeModel> GetEmployeeByEmailAsync(string email)
+        {
+            // Busca el usuario por email en la tabla Users de Identity
+            return await _context.Employees.FirstOrDefaultAsync(model => model.Email == email);
+        }
+
+        public async Task AddCustomerAsync(CustomerModel customer)
+        {
+            await _context.Customers.AddAsync(customer);
+        }
     }
 }

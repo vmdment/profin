@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BackendProFinAPi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ddcfe0966793d4f249f510452607b92db8bdcede")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c9a08added24de64744de0979378b458a3a3fa0c")]
 [assembly: System.Reflection.AssemblyProductAttribute("BackendProFinAPi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BackendProFinAPi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

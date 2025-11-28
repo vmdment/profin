@@ -10,7 +10,12 @@ namespace BackendProFinAPi.Repositories
         // Usado para verificar si existe un usuario y para el login.
         Task<UserModels> GetUserByEmailAsync(string email);
 
+        Task<CustomerModel> GetCustomerByEmailAsync(string email);
+
+        Task<EmployeeModel> GetEmployeeByEmailAsync(string email);
+
         // Usado para crear un nuevo usuario.
         Task AddUserAsync(UserModels user);
+        Task AddCustomerAsync(CustomerModel customer);
     }
 }

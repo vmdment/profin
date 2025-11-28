@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using BackendProFinAPi.Moldels.DTO; // Asume que LoginDTOcs está aquí
+using BackendProFinAPi.Models.DTO; // Asume que LoginDTOcs está aquí
 using BackendProFinAPi.Services;
 using System.Threading.Tasks;
 
@@ -23,28 +23,28 @@ namespace BackendProFinAPi.Controllers
         [HttpPost("register")]
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public async Task<IActionResult> Register([FromBody] LoginDTOcs registerData)
+        public async Task<IActionResult> Register([FromBody] RegisterDTO registerData)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            var user = await _authService.RegisterUserAsync(registerData);
+            var registerDao = await _authService.RegisterUserAsync(registerData);
 
-            if (user == null)
+            if (registerDao == null)
             {
                 return BadRequest(new { Message = "El usuario con ese email ya existe." });
             }
 
             // Opcional: Generar token inmediatamente después del registro
-            var token = _authService.GenerateJwtToken(user);
+            var token = _authService.GenerateJwtToken(registerDao);
 
             return Created(string.Empty, new
             {
-                UserId = user.Id,
-                Email = user.Email,
-                Role = user.Role,
+                UserId = registerDao.Model.Id,
+                Email = registerDao.Model.Email,
+                Role = registerDao.UserModel.Role,
                 Token = token
             });
         }
@@ -62,22 +62,22 @@ namespace BackendProFinAPi.Controllers
                 return BadRequest(ModelState);
             }
 
-            var user = await _authService.AuthenticateUserAsync(loginDto);
+            var loginDao = await _authService.AuthenticateUserAsync(loginDto);
 
-            if (user == null)
+            if (loginDao == null)
             {
                 return Unauthorized(new { Message = "Email o contraseña incorrectos." });
             }
 
             // Generar el Token JWT
-            var token = _authService.GenerateJwtToken(user);
+            var token = _authService.GenerateJwtToken(loginDao);
 
             // Devolver el Token y los datos del usuario. El cliente guardará este token.
             return Ok(new
             {
-                UserId = user.Id,
-                Email = user.Email,
-                Role = user.Role, // El rol se devuelve para que el frontend lo use
+                UserId = loginDao.Model.Id,
+                Email = loginDao.Model.Email,
+                Role = loginDao.UserModel.Role, // El rol se devuelve para que el frontend lo use
                 Token = token
             });
         }
